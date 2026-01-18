@@ -1,20 +1,10 @@
----
-layout: default
-title: Git Commands
----
-
 # Git Commands
-
-[← Home](../)
-
----
 
 ## Daily
 
 ```bash
 git status
-git add .
-git commit -m "message"
+git add -A && git commit -m "message"
 git push
 git pull
 ```

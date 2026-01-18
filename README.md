@@ -2,13 +2,26 @@
 
 Personal dev environment documentation.
 
-🌐 https://YOUR_USERNAME.github.io/work-setup
+🌐 https://buerostuff.github.io/work-setup
 
 ## Sections
 
-- Git SSH (port 443)
-- Git commands
-- Docker
-- Azure CLI
-- Terminal + Starship
-- Nerd Fonts
+* Git SSH (port 443)
+* Git commands
+* Docker
+* Azure CLI
+* Terminal + Starship
+* Nerd Fonts
+
+## Local Development
+
+```bash
+pip install mkdocs-material
+mkdocs serve
+```
+
+## Deploy to GitHub Pages
+
+```bash
+mkdocs gh-deploy
+```

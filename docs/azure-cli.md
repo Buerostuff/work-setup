@@ -1,39 +1,28 @@
----
-layout: default
-title: Azure CLI
----
-
 # Azure CLI
-
-[← Home](../)
-
----
 
 ## Installation
 
-<details>
-<summary><strong>macOS</strong></summary>
+=== "macOS"
 
-```bash
-brew install azure-cli
-```
-</details>
+    ```bash
+    brew install azure-cli
+    ```
 
-<details>
-<summary><strong>Linux (Ubuntu/Debian)</strong></summary>
+=== "Linux"
 
-```bash
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-```
-</details>
+    ```bash
+    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+    ```
 
-<details>
-<summary><strong>Windows</strong></summary>
+=== "Windows"
 
-```powershell
-winget install Microsoft.AzureCLI
-```
-</details>
+    ```powershell
+    # winget
+    winget install Microsoft.AzureCLI
+
+    # scoop
+    scoop install azure-cli
+    ```
 
 ---
 
@@ -55,11 +44,37 @@ az account set -s "<name-or-id>"
 
 ---
 
-## Common Commands
+## Resource Group
 
 ```bash
 az group list -o table
-az vm list -o table
+az resource list -g <rg> -o table
+```
+
+---
+
+## Container Registry (ACR)
+
+```bash
+az acr list -o table
+az acr login -n <acr-name>
+```
+
+---
+
+## Key Vault
+
+```bash
+az keyvault list -o table
+az keyvault secret list --vault-name <kv-name> -o table
+az keyvault secret show --vault-name <kv-name> -n <secret-name> --query value -o tsv
+```
+
+---
+
+## AKS
+
+```bash
 az aks list -o table
 az aks get-credentials -g <rg> -n <cluster>
 ```

@@ -1,77 +1,93 @@
----
-layout: default
-title: Docker Setup
----
-
 # Docker Setup
-
-[← Home](../)
-
----
 
 ## Installation
 
-<details>
-<summary><strong>macOS</strong></summary>
+=== "macOS"
 
-```bash
-brew install --cask docker
-```
+    ```bash
+    brew install --cask docker
+    ```
 
-Or download from [docker.com](https://www.docker.com/products/docker-desktop)
-</details>
+    Or download from [docker.com](https://www.docker.com/products/docker-desktop)
 
-<details>
-<summary><strong>Linux (Ubuntu/Debian)</strong></summary>
+=== "Linux"
 
-```bash
-curl -fsSL https://get.docker.com | sh
-sudo usermod -aG docker $USER
-# logout and login
-```
-</details>
+    ```bash
+    curl -fsSL https://get.docker.com | sh
+    sudo usermod -aG docker $USER
+    # logout and login
+    ```
 
-<details>
-<summary><strong>Windows</strong></summary>
+=== "Windows"
 
-```powershell
-winget install Docker.DockerDesktop
-```
+    ```powershell
+    # winget
+    winget install Docker.DockerDesktop
 
-Or download from [docker.com](https://www.docker.com/products/docker-desktop)
-</details>
+    # scoop
+    scoop install docker
+    ```
+
+    Or download from [docker.com](https://www.docker.com/products/docker-desktop)
 
 ---
 
-## Custom Data Path
+## Custom Install Path (Windows)
 
-<details>
-<summary><strong>macOS</strong></summary>
+Don't double-click the installer. Use command line to specify custom paths.
 
-Docker Desktop → Settings → Resources → Disk image location
-</details>
+=== "PowerShell"
 
-<details>
-<summary><strong>Linux</strong></summary>
+    ```powershell
+    # Run as Administrator
+    cd ~\Downloads
+    Start-Process -Wait -FilePath ".\Docker Desktop Installer.exe" -ArgumentList "install", "-accept-license", "--installation-dir=D:\Docker", "--wsl-default-data-root=D:\Docker\images"
+    ```
 
-Edit `/etc/docker/daemon.json`:
+=== "CMD"
 
-```json
-{
-  "data-root": "/path/to/docker"
-}
-```
+    ```cmd
+    :: Run as Administrator
+    cd %USERPROFILE%\Downloads
+    start /w "" "Docker Desktop Installer.exe" install -accept-license --installation-dir=D:\Docker --wsl-default-data-root=D:\Docker\images
+    ```
 
-```bash
-sudo systemctl restart docker
-```
-</details>
+**Flags explained:**
 
-<details>
-<summary><strong>Windows</strong></summary>
+| Flag | Purpose |
+|------|---------|
+| `-accept-license` | Auto-accept license agreement |
+| `--installation-dir=D:\Docker` | Install Docker app to D:\Docker |
+| `--wsl-default-data-root=D:\Docker\images` | Store WSL data & images on D: |
 
-Docker Desktop → Settings → Resources → Disk image location
-</details>
+!!! note
+    Without `--wsl-default-data-root`, images still go to `%HOME%\AppData\Local\Docker`
+
+---
+
+## Custom Data Path (Post-Install)
+
+=== "macOS"
+
+    Docker Desktop → Settings → Resources → Disk image location
+
+=== "Linux"
+
+    Edit `/etc/docker/daemon.json`:
+
+    ```json
+    {
+      "data-root": "/path/to/docker"
+    }
+    ```
+
+    ```bash
+    sudo systemctl restart docker
+    ```
+
+=== "Windows"
+
+    Docker Desktop → Settings → Resources → Disk image location
 
 ---
 

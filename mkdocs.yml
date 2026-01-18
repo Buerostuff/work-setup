@@ -1,0 +1,42 @@
+site_name: Work Setup
+site_url: https://buerostuff.github.io/work-setup
+repo_url: https://github.com/buerostuff/work-setup
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+    - scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+  features:
+    - content.code.copy
+    - content.tabs.link
+    - navigation.instant
+    - navigation.sections
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+nav:
+  - Home: index.md
+  - Software: software.md
+  - Git SSH Setup: git-ssh-setup.md
+  - Git Commands: git-commands.md
+  - Docker: docker-setup.md
+  - Azure CLI: azure-cli.md
+  - Terminal: terminal-setup.md
+  - Fonts: fonts.md

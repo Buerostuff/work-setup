@@ -1,78 +1,60 @@
----
-layout: default
-title: Fonts
----
-
 # Nerd Fonts
-
-[← Home](../)
-
----
 
 ## JetBrains Mono NF
 
-<details>
-<summary><strong>macOS</strong></summary>
+=== "macOS"
 
-```bash
-brew install --cask font-jetbrains-mono-nerd-font
-```
-</details>
+    ```bash
+    brew install --cask font-jetbrains-mono-nerd-font
+    ```
 
-<details>
-<summary><strong>Linux</strong></summary>
+=== "Linux"
 
-```bash
-mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts
-curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-unzip JetBrainsMono.zip -d JetBrainsMono
-rm JetBrainsMono.zip
-fc-cache -fv
-```
-</details>
+    ```bash
+    mkdir -p ~/.local/share/fonts
+    cd ~/.local/share/fonts
+    curl -fLO https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+    unzip JetBrainsMono.zip -d JetBrainsMono
+    rm JetBrainsMono.zip
+    fc-cache -fv
+    ```
 
-<details>
-<summary><strong>Windows</strong></summary>
+=== "Windows"
 
-```powershell
-# Download, extract, right-click .ttf → Install
-Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" -OutFile "JetBrainsMono.zip"
-Expand-Archive JetBrainsMono.zip -DestinationPath JetBrainsMono
-```
-</details>
+    ```powershell
+    # scoop
+    scoop bucket add nerd-fonts
+    scoop install JetBrainsMono-NF
+
+    # manual
+    Invoke-WebRequest -Uri "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" -OutFile "JetBrainsMono.zip"
+    Expand-Archive JetBrainsMono.zip -DestinationPath JetBrainsMono
+    # Right-click .ttf files → Install
+    ```
 
 ---
 
 ## Set Font in Terminal
 
-<details>
-<summary><strong>macOS (iTerm2)</strong></summary>
+=== "macOS (iTerm2)"
 
-Preferences → Profiles → Text → Font → `JetBrainsMono Nerd Font`
-</details>
+    Preferences → Profiles → Text → Font → `JetBrainsMono Nerd Font`
 
-<details>
-<summary><strong>Linux</strong></summary>
+=== "Linux"
 
-Terminal settings → Font → `JetBrainsMono Nerd Font`
-</details>
+    Terminal settings → Font → `JetBrainsMono Nerd Font`
 
-<details>
-<summary><strong>Windows Terminal</strong></summary>
+=== "Windows Terminal"
 
-Settings → Profile → Appearance → Font face → `JetBrainsMono Nerd Font`
-</details>
+    Settings → Profile → Appearance → Font face → `JetBrainsMono Nerd Font`
 
-<details>
-<summary><strong>VS Code</strong></summary>
+=== "VS Code"
 
-```json
-{
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font"
-}
-```
-</details>
+    ```json
+    {
+      "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font"
+    }
+    ```
 
 ---
 

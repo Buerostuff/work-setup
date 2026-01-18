@@ -1,79 +1,62 @@
----
-layout: default
-title: Terminal Setup
----
-
 # Terminal Setup
-
-[← Home](../)
-
----
 
 ## Install Starship
 
-<details>
-<summary><strong>macOS</strong></summary>
+=== "macOS"
 
-```bash
-brew install starship
-```
-</details>
+    ```bash
+    brew install starship
+    ```
 
-<details>
-<summary><strong>Linux</strong></summary>
+=== "Linux"
 
-```bash
-curl -sS https://starship.rs/install.sh | sh
-```
-</details>
+    ```bash
+    curl -sS https://starship.rs/install.sh | sh
+    ```
 
-<details>
-<summary><strong>Windows</strong></summary>
+=== "Windows"
 
-```powershell
-winget install Starship.Starship
-```
-</details>
+    ```powershell
+    # winget
+    winget install Starship.Starship
+
+    # scoop
+    scoop install starship
+    ```
 
 ---
 
 ## Shell Init
 
-<details>
-<summary><strong>macOS / Linux (zsh)</strong></summary>
+=== "macOS / Linux (zsh)"
 
-Add to `~/.zshrc`:
+    Add to `~/.zshrc`:
 
-```bash
-eval "$(starship init zsh)"
-```
-</details>
+    ```bash
+    eval "$(starship init zsh)"
+    ```
 
-<details>
-<summary><strong>macOS / Linux (bash)</strong></summary>
+=== "macOS / Linux (bash)"
 
-Add to `~/.bashrc`:
+    Add to `~/.bashrc`:
 
-```bash
-eval "$(starship init bash)"
-```
-</details>
+    ```bash
+    eval "$(starship init bash)"
+    ```
 
-<details>
-<summary><strong>Windows (PowerShell)</strong></summary>
+=== "Windows (PowerShell)"
 
-Add to `$PROFILE`:
+    Add to `$PROFILE`:
 
-```powershell
-Invoke-Expression (&starship init powershell)
-```
-</details>
+    ```powershell
+    Invoke-Expression (&starship init powershell)
+    ```
 
 ---
 
 ## Minimal Config
 
-Create `~/.config/starship.toml` (or `~/.config/starship.toml` on Windows via `$env:USERPROFILE\.config\starship.toml`):
+Create `~/.config/starship.toml`:
 
 ```toml
 add_newline = true
