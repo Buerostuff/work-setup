@@ -1,0 +1,22 @@
+title: Work Environment Setup
+description: Personal documentation for dev environment configuration
+theme: jekyll-theme-minimal
+baseurl: "/work-setup"
+url: "https://buerostuff.github.io"
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: Git SSH Setup
+    url: /docs/git-ssh-setup
+  - title: Git Commands
+    url: /docs/git-commands
+  - title: Docker Setup
+    url: /docs/docker-setup
+  - title: Azure CLI
+    url: /docs/azure-cli
+  - title: Terminal Setup
+    url: /docs/terminal-setup
+  - title: Fonts
+    url: /docs/fonts
