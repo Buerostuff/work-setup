@@ -46,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Code"}</style>
       
     
     
@@ -67,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,10 +92,10 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Work Setup" class="md-header__button md-logo" aria-label="Work Setup" data-md-component="logo">
+    <a href="/work-setup/" title="Work Setup" class="md-header__button md-logo" aria-label="Work Setup" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -125,7 +125,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -191,18 +191,6 @@
       
     
     
-      <div class="md-header__source">
-        <a href="https://github.com/buerostuff/work-setup" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-      </div>
-    
   </nav>
   
 </header>
@@ -228,26 +216,14 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Work Setup" class="md-nav__button md-logo" aria-label="Work Setup" data-md-component="logo">
+    <a href="/work-setup/" title="Work Setup" class="md-nav__button md-logo" aria-label="Work Setup" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
 
     </a>
     Work Setup
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/buerostuff/work-setup" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -349,6 +325,138 @@
     <span class="md-ellipsis">
       
         Required Software
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starship
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cursor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node.js
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greenshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greenshot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espanso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Espanso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typora
       
     </span>
   </a>
@@ -602,6 +710,138 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PowerShell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starship
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cursor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cursor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node.js
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#greenshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greenshot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#espanso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Espanso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typora
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows-terminal-powershell-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -656,9 +896,6 @@
                   
 
 
-  
-  
-
 
 <h1 id="software-list">Software List</h1>
 <h2 id="required-software">Required Software</h2>
@@ -666,78 +903,336 @@
 <thead>
 <tr>
 <th>Software</th>
-<th>Windows</th>
-<th>macOS</th>
+<th>Description</th>
+<th>Download</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Git</td>
-<td>winget / scoop</td>
-<td>brew</td>
+<td><a href="#powershell">PowerShell</a></td>
+<td>Modern shell</td>
+<td><a href="https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows">Microsoft Docs</a></td>
 </tr>
 <tr>
-<td>Docker Desktop</td>
-<td>winget / scoop</td>
-<td>brew</td>
+<td><a href="#starship">Starship</a></td>
+<td>Shell prompt</td>
+<td><a href="https://starship.rs">starship.rs</a></td>
 </tr>
 <tr>
-<td>Azure CLI</td>
-<td>winget / scoop</td>
-<td>brew</td>
+<td><a href="#git">Git</a></td>
+<td>Version control</td>
+<td><a href="https://git-scm.com">git-scm.com</a></td>
 </tr>
 <tr>
-<td>VS Code</td>
-<td>winget / scoop</td>
-<td>brew</td>
+<td><a href="#cursor">Cursor</a></td>
+<td>AI-powered code editor</td>
+<td><a href="https://cursor.com">cursor.com</a></td>
 </tr>
 <tr>
-<td>Windows Terminal</td>
-<td>winget</td>
-<td>-</td>
+<td><a href="#vs-code">VS Code</a></td>
+<td>Code editor</td>
+<td><a href="https://code.visualstudio.com">code.visualstudio.com</a></td>
 </tr>
 <tr>
-<td>PowerShell 7</td>
-<td>winget</td>
-<td>brew</td>
+<td><a href="#docker">Docker</a></td>
+<td>Container platform</td>
+<td><a href="https://www.docker.com/products/docker-desktop">docker.com</a></td>
 </tr>
 <tr>
-<td>Starship</td>
-<td>winget / scoop</td>
-<td>brew</td>
+<td><a href="#nodejs">Node.js</a></td>
+<td>JavaScript runtime</td>
+<td><a href="https://nodejs.org">nodejs.org</a></td>
 </tr>
 <tr>
-<td>JetBrains Mono NF</td>
-<td>scoop</td>
-<td>brew</td>
+<td><a href="#python">Python</a></td>
+<td>Programming language</td>
+<td><a href="https://www.python.org/downloads">python.org</a></td>
 </tr>
 <tr>
-<td>Firefox</td>
-<td>winget / scoop</td>
-<td>brew</td>
+<td><a href="#go">Go</a></td>
+<td>Programming language</td>
+<td><a href="https://go.dev/dl">go.dev</a></td>
 </tr>
 <tr>
-<td>Python</td>
-<td>winget / scoop</td>
-<td>brew</td>
+<td><a href="#greenshot">Greenshot</a></td>
+<td>Screenshot tool</td>
+<td><a href="https://getgreenshot.org">getgreenshot.org</a></td>
 </tr>
 <tr>
-<td>Go</td>
-<td>winget / scoop</td>
-<td>brew</td>
+<td><a href="#espanso">Espanso</a></td>
+<td>Text expander</td>
+<td><a href="https://espanso.org">espanso.org</a></td>
 </tr>
 <tr>
-<td>Node</td>
-<td>winget / scoop</td>
-<td>brew</td>
-</tr>
-<tr>
-<td>Bun</td>
-<td>scoop</td>
-<td>brew</td>
+<td><a href="#typora">Typora</a></td>
+<td>Markdown editor</td>
+<td><a href="https://typora.io">typora.io</a></td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="powershell">PowerShell</h2>
+<p>Modern cross-platform shell.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="windows" name="__tabbed_1" type="radio" /><input id="macos" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="windows">Windows</label><label for="macos">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget (recommended)</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">PowerShell</span>
+
+<span class="c"># MSI installer</span>
+<span class="c"># Download from https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows</span>
+</code></pre></div>
+<p>For silent MSI install:</p>
+<div class="highlight"><pre><span></span><code><span class="n">msiexec</span><span class="p">.</span><span class="n">exe</span> <span class="p">/</span><span class="n">package</span> <span class="n">PowerShell</span><span class="p">-</span><span class="n">7</span><span class="p">.</span><span class="n">5</span><span class="p">.</span><span class="n">4-win-x64</span><span class="p">.</span><span class="n">msi</span> <span class="p">/</span><span class="n">quiet</span> <span class="n">ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL</span><span class="p">=</span><span class="n">1</span> <span class="n">ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL</span><span class="p">=</span><span class="n">1</span> <span class="n">ENABLE_PSREMOTING</span><span class="p">=</span><span class="n">1</span> <span class="n">REGISTER_MANIFEST</span><span class="p">=</span><span class="n">1</span> <span class="n">USE_MU</span><span class="p">=</span><span class="n">1</span> <span class="n">ENABLE_MU</span><span class="p">=</span><span class="n">1</span> <span class="n">ADD_PATH</span><span class="p">=</span><span class="n">1</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>powershell
+</code></pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> See <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows">Microsoft Docs</a> for all installation options including MSI, ZIP, and .NET Global tool.</p>
+</blockquote>
+<hr />
+<h2 id="starship">Starship</h2>
+<p>Cross-shell prompt with customization.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="windows_1" name="__tabbed_2" type="radio" /><input id="macos_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="windows_1">Windows</label><label for="macos_1">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Starship</span><span class="p">.</span><span class="n">Starship</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">starship</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>starship
+</code></pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> See <a href="../terminal-setup/">Terminal Setup</a> for shell configuration.</p>
+</blockquote>
+<hr />
+<h2 id="git">Git</h2>
+<p>Version control system.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="windows_2" name="__tabbed_3" type="radio" /><input id="macos_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="windows_2">Windows</label><label for="macos_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Git</span><span class="p">.</span><span class="n">Git</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">git</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>git
+</code></pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> See <a href="../git-ssh-setup/">Git SSH Setup</a> for SSH configuration.</p>
+</blockquote>
+<hr />
+<h2 id="cursor">Cursor</h2>
+<p>AI-powered code editor built on VS Code.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="windows_3" name="__tabbed_4" type="radio" /><input id="macos_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="windows_3">Windows</label><label for="macos_3">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Cursor</span><span class="p">.</span><span class="n">Cursor</span>
+
+<span class="c"># manual</span>
+<span class="c"># Download from https://cursor.com</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>cursor
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="vs-code">VS Code</h2>
+<p>Code editor by Microsoft.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="windows_4" name="__tabbed_5" type="radio" /><input id="macos_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="windows_4">Windows</label><label for="macos_4">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">VisualStudioCode</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">vscode</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>visual-studio-code
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="docker">Docker</h2>
+<p>Container platform for building and running applications.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="windows_5" name="__tabbed_6" type="radio" /><input id="macos_5" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="windows_5">Windows</label><label for="macos_5">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Docker</span><span class="p">.</span><span class="n">DockerDesktop</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">docker</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>docker
+</code></pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> See <a href="../docker-setup/">Docker Setup</a> for custom install paths and VDI configuration.</p>
+</blockquote>
+<hr />
+<h2 id="nodejs">Node.js</h2>
+<p>JavaScript runtime.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="windows_6" name="__tabbed_7" type="radio" /><input id="macos_6" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="windows_6">Windows</label><label for="macos_6">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">OpenJS</span><span class="p">.</span><span class="n">NodeJS</span><span class="p">.</span><span class="n">LTS</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">nodejs-lts</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>node
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="python">Python</h2>
+<p>Programming language.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="windows_7" name="__tabbed_8" type="radio" /><input id="macos_7" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="windows_7">Windows</label><label for="macos_7">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Python</span><span class="p">.</span><span class="n">Python</span><span class="p">.</span><span class="n">3</span><span class="p">.</span><span class="n">12</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">python</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>python
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="go">Go</h2>
+<p>Programming language by Google.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="windows_8" name="__tabbed_9" type="radio" /><input id="macos_8" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="windows_8">Windows</label><label for="macos_8">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">GoLang</span><span class="p">.</span><span class="n">Go</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">go</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>go
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="greenshot">Greenshot</h2>
+<p>Screenshot tool for Windows.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="windows_9" name="__tabbed_10" type="radio" /><input id="macos_9" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="windows_9">Windows</label><label for="macos_9">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Greenshot</span><span class="p">.</span><span class="n">Greenshot</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">greenshot</span>
+
+<span class="c"># manual</span>
+<span class="c"># Download from https://getgreenshot.org</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Not available. Use built-in screenshot (Cmd+Shift+4) or <a href="https://shottr.cc">Shottr</a>.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="espanso">Espanso</h2>
+<p>Cross-platform text expander and snippet manager.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="windows_10" name="__tabbed_11" type="radio" /><input id="macos_10" name="__tabbed_11" type="radio" /><input id="linux" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="windows_10">Windows</label><label for="macos_10">macOS</label><label for="linux">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Espanso</span><span class="p">.</span><span class="n">Espanso</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">espanso</span>
+
+<span class="c"># manual</span>
+<span class="c"># Download from https://espanso.org/install</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>espanso
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Snap</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>espanso<span class="w"> </span>--classic
+
+<span class="c1"># Manual</span>
+<span class="c1"># See https://espanso.org/install</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="typora">Typora</h2>
+<p>Markdown editor with live preview.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="windows_11" name="__tabbed_12" type="radio" /><input id="macos_11" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="windows_11">Windows</label><label for="macos_11">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">Typora</span><span class="p">.</span><span class="n">Typora</span>
+
+<span class="c"># scoop (requires extras bucket)</span>
+<span class="n">scoop</span> <span class="n">bucket</span> <span class="n">add</span> <span class="n">extras</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">typora</span>
+
+<span class="c"># manual</span>
+<span class="c"># Download from https://typora.io</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>typora
+</code></pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> Typora requires a license (not free). See <a href="https://typora.io">typora.io</a> for pricing.</p>
+</blockquote>
 <hr />
 <h2 id="windows-terminal-powershell-setup">Windows Terminal + PowerShell Setup</h2>
 <p>When group policy blocks <code>profile.ps1</code> execution, configure starship directly in Windows Terminal settings.</p>
@@ -817,11 +1312,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

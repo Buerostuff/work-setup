@@ -46,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Code"}</style>
       
     
     
@@ -67,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git-ssh-setup-port-443" class="md-skip">
+        <a href="#git-ssh-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -92,10 +92,10 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Work Setup" class="md-header__button md-logo" aria-label="Work Setup" data-md-component="logo">
+    <a href="/work-setup/" title="Work Setup" class="md-header__button md-logo" aria-label="Work Setup" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -125,7 +125,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -191,18 +191,6 @@
       
     
     
-      <div class="md-header__source">
-        <a href="https://github.com/buerostuff/work-setup" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-      </div>
-    
   </nav>
   
 </header>
@@ -228,26 +216,14 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Work Setup" class="md-nav__button md-logo" aria-label="Work Setup" data-md-component="logo">
+    <a href="/work-setup/" title="Work Setup" class="md-nav__button md-logo" aria-label="Work Setup" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
 
     </a>
     Work Setup
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/buerostuff/work-setup" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -383,17 +359,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssh-config-port-443" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SSH Config (Port 443)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#copy-public-key" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -405,6 +370,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#add-ssh-key-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add SSH Key to GitHub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-config-port-443" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Config (Port 443)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Config (Port 443)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-port-443" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Port 443?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#test-connection" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -412,6 +416,139 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-git-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Git Profiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Git Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-generate-separate-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Generate Separate Keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-add-keys-to-ssh-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Add Keys to SSH Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-ssh-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Configure SSH Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-add-keys-to-github-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Add Keys to GitHub Accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-clone-using-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Clone Using Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-configure-git-user-per-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Configure Git User Per Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-publickey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission denied (publickey)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-timed-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection timed out
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-profiles-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple profiles not working
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -596,17 +733,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssh-config-port-443" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SSH Config (Port 443)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#copy-public-key" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -618,6 +744,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#add-ssh-key-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add SSH Key to GitHub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-config-port-443" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH Config (Port 443)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SSH Config (Port 443)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-port-443" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Port 443?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#test-connection" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -625,6 +790,139 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-git-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple Git Profiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Git Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-generate-separate-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Generate Separate Keys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-add-keys-to-ssh-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Add Keys to SSH Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-configure-ssh-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Configure SSH Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-add-keys-to-github-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Add Keys to GitHub Accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-clone-using-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Clone Using Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-configure-git-user-per-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Configure Git User Per Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-denied-publickey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission denied (publickey)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-timed-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection timed out
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-profiles-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiple profiles not working
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -644,11 +942,8 @@
                   
 
 
-  
-  
 
-
-<h1 id="git-ssh-setup-port-443">Git SSH Setup (Port 443)</h1>
+<h1 id="git-ssh-setup">Git SSH Setup</h1>
 <h2 id="generate-ssh-key">Generate SSH Key</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="macos--linux" name="__tabbed_1" type="radio" /><input id="windows" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="macos--linux">macOS / Linux</label><label for="windows">Windows</label></div>
 <div class="tabbed-content">
@@ -668,8 +963,40 @@ ssh-add<span class="w"> </span>~/.ssh/id_ed25519
 </div>
 </div>
 <hr />
+<h2 id="copy-public-key">Copy Public Key</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="macos" name="__tabbed_2" type="radio" /><input id="linux" name="__tabbed_2" type="radio" /><input id="windows_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="macos">macOS</label><label for="linux">Linux</label><label for="windows_1">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_ed25519.pub
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">Get-Content</span> <span class="nv">$env:USERPROFILE</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">id_ed25519</span><span class="p">.</span><span class="n">pub</span> <span class="p">|</span> <span class="nb">Set-Clipboard</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="add-ssh-key-to-github">Add SSH Key to GitHub</h2>
+<ol>
+<li>Go to <a href="https://github.com/settings/keys">GitHub SSH Settings</a></li>
+<li>Click <strong>New SSH key</strong></li>
+<li>Give it a title (e.g., "Work Laptop")</li>
+<li>Paste your public key</li>
+<li>Click <strong>Add SSH key</strong></li>
+</ol>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> See GitHub's official guide: <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Adding a new SSH key to your GitHub account</a></p>
+</blockquote>
+<hr />
 <h2 id="ssh-config-port-443">SSH Config (Port 443)</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="macos--linux_1" name="__tabbed_2" type="radio" /><input id="windows_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="macos--linux_1">macOS / Linux</label><label for="windows_1">Windows</label></div>
+<h3 id="why-port-443">Why Port 443?</h3>
+<p>Many corporate firewalls block port 22 (default SSH port). GitHub allows SSH connections over port 443 (HTTPS port) which is usually open.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="macos--linux_1" name="__tabbed_3" type="radio" /><input id="windows_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="macos--linux_1">macOS / Linux</label><label for="windows_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Edit <code>~/.ssh/config</code>:</p>
@@ -692,26 +1019,93 @@ ssh-add<span class="w"> </span>~/.ssh/id_ed25519
 </div>
 </div>
 <hr />
-<h2 id="copy-public-key">Copy Public Key</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="macos" name="__tabbed_3" type="radio" /><input id="linux" name="__tabbed_3" type="radio" /><input id="windows_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="macos">macOS</label><label for="linux">Linux</label><label for="windows_2">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_ed25519.pub
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="nb">Get-Content</span> <span class="nv">$env:USERPROFILE</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">id_ed25519</span><span class="p">.</span><span class="n">pub</span> <span class="p">|</span> <span class="nb">Set-Clipboard</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<hr />
 <h2 id="test-connection">Test Connection</h2>
 <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>-T<span class="w"> </span>git@github.com
+</code></pre></div>
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div>
+<hr />
+<h2 id="multiple-git-profiles">Multiple Git Profiles</h2>
+<p>If you have multiple GitHub accounts (e.g., personal and work), you can configure separate SSH keys and profiles.</p>
+<h3 id="step-1-generate-separate-keys">Step 1: Generate Separate Keys</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Personal account</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;personal@email.com&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_ed25519_personal
+
+<span class="c1"># Work account</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;work@company.com&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_ed25519_work
+</code></pre></div>
+<h3 id="step-2-add-keys-to-ssh-agent">Step 2: Add Keys to SSH Agent</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="macos--linux_2" name="__tabbed_4" type="radio" /><input id="windows_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="macos--linux_2">macOS / Linux</label><label for="windows_3">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>ssh-add<span class="w"> </span>~/.ssh/id_ed25519_personal
+ssh-add<span class="w"> </span>~/.ssh/id_ed25519_work
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">ssh-add</span> <span class="nv">$env:USERPROFILE</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">id_ed25519_personal</span>
+<span class="n">ssh-add</span> <span class="nv">$env:USERPROFILE</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">id_ed25519_work</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="step-3-configure-ssh-config">Step 3: Configure SSH Config</h3>
+<p>Edit <code>~/.ssh/config</code> (or <code>C:\Users\&lt;username&gt;\.ssh\config</code> on Windows):</p>
+<div class="highlight"><pre><span></span><code># Personal GitHub
+Host github.com
+    HostName ssh.github.com
+    Port 443
+    User git
+    IdentityFile ~/.ssh/id_ed25519_personal
+
+# Work GitHub (use custom host alias)
+Host github_work
+    HostName ssh.github.com
+    Port 443
+    User git
+    IdentityFile ~/.ssh/id_ed25519_work
+</code></pre></div>
+<h3 id="step-4-add-keys-to-github-accounts">Step 4: Add Keys to GitHub Accounts</h3>
+<p>Add each public key to its respective GitHub account:</p>
+<ul>
+<li>Personal: Add <code>id_ed25519_personal.pub</code> to your personal GitHub</li>
+<li>Work: Add <code>id_ed25519_work.pub</code> to your work GitHub</li>
+</ul>
+<h3 id="step-5-clone-using-profile">Step 5: Clone Using Profile</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Personal (default)</span>
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:personal-user/repo.git
+
+<span class="c1"># Work (use custom host)</span>
+git<span class="w"> </span>clone<span class="w"> </span>git@github_work:work-org/repo.git
+</code></pre></div>
+<h3 id="step-6-configure-git-user-per-repository">Step 6: Configure Git User Per Repository</h3>
+<p>After cloning, set the correct user for each repo:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/path/to/work/repo
+git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Work Name&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;work@company.com&quot;</span>
+</code></pre></div>
+<blockquote>
+<p><strong><em>TIP:</em></strong> For automatic user config based on folder, see <a href="https://git-scm.com/docs/git-config#_conditional_includes">Conditional Git Config</a>.</p>
+</blockquote>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="permission-denied-publickey">Permission denied (publickey)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check which key is being used</span>
+ssh<span class="w"> </span>-vT<span class="w"> </span>git@github.com
+
+<span class="c1"># Verify key is added to agent</span>
+ssh-add<span class="w"> </span>-l
+</code></pre></div>
+<h3 id="connection-timed-out">Connection timed out</h3>
+<p>Your firewall may be blocking port 22. Use port 443 config above.</p>
+<h3 id="multiple-profiles-not-working">Multiple profiles not working</h3>
+<p>Make sure you're using the correct host alias in your git remote:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check current remote</span>
+git<span class="w"> </span>remote<span class="w"> </span>-v
+
+<span class="c1"># Update to use correct profile</span>
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github_work:org/repo.git
 </code></pre></div>
 
 
@@ -743,11 +1137,6 @@ ssh-add<span class="w"> </span>~/.ssh/id_ed25519
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       

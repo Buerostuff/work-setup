@@ -46,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Code"}</style>
       
     
     
@@ -67,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,10 +92,10 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Work Setup" class="md-header__button md-logo" aria-label="Work Setup" data-md-component="logo">
+    <a href="/work-setup/" title="Work Setup" class="md-header__button md-logo" aria-label="Work Setup" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -125,7 +125,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -135,7 +135,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -191,18 +191,6 @@
       
     
     
-      <div class="md-header__source">
-        <a href="https://github.com/buerostuff/work-setup" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-      </div>
-    
   </nav>
   
 </header>
@@ -228,26 +216,14 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Work Setup" class="md-nav__button md-logo" aria-label="Work Setup" data-md-component="logo">
+    <a href="/work-setup/" title="Work Setup" class="md-nav__button md-logo" aria-label="Work Setup" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
 
     </a>
     Work Setup
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/buerostuff/work-setup" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -437,6 +413,128 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#running-docker-in-vdi-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Docker in VDI Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Docker in VDI Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-right-click-docker-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Right-click Docker Desktop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-provide-elevation-reason" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Provide Elevation Reason
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Confirmation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-to-azure-container-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login to Azure Container Registry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Login to Azure Container Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-login-to-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Login to Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-select-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Select Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-login-to-acr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Login to ACR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-docker-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Docker Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-docker-login-still-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting: Docker Login Still Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-install-path-windows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -607,6 +705,128 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#running-docker-in-vdi-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Docker in VDI Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Docker in VDI Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-right-click-docker-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Right-click Docker Desktop
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-provide-elevation-reason" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Provide Elevation Reason
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Confirmation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#login-to-azure-container-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login to Azure Container Registry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Login to Azure Container Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-login-to-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Login to Azure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-select-subscription" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Select Subscription
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-login-to-acr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Login to ACR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-docker-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Docker Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-docker-login-still-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting: Docker Login Still Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#custom-install-path-windows" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -666,9 +886,6 @@
                   
 
 
-  
-  
-
 
 <h1 id="docker-setup">Docker Setup</h1>
 <h2 id="installation">Installation</h2>
@@ -696,6 +913,60 @@ sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> <
 </div>
 </div>
 </div>
+<hr />
+<h2 id="running-docker-in-vdi-environment">Running Docker in VDI Environment</h2>
+<p>In corporate VDI (Virtual Desktop Infrastructure) environments, Docker Desktop may require elevated privileges to run properly.</p>
+<h3 id="step-1-right-click-docker-desktop">Step 1: Right-click Docker Desktop</h3>
+<p>Right-click the Docker Desktop shortcut and select <strong>Run with Administrator Privileges</strong>.</p>
+<p><img alt="Docker Admin Menu" src="../assets/images/docker-admin-menu.png" /></p>
+<h3 id="step-2-provide-elevation-reason">Step 2: Provide Elevation Reason</h3>
+<p>A Privilege Elevation dialog will appear. Enter a reason (e.g., "Development work") and click <strong>Continue</strong>.</p>
+<p><img alt="Privilege Elevation Dialog" src="../assets/images/docker-privilege-dialog.png" /></p>
+<h3 id="step-3-confirmation">Step 3: Confirmation</h3>
+<p>You'll see a confirmation that Docker is now running with administrator privileges.</p>
+<p><img alt="Privilege Elevated Successfully" src="../assets/images/docker-privilege-success.png" /></p>
+<blockquote>
+<p><strong><em>TIP:</em></strong> If Docker fails to start containers or shows permission errors, running with elevated privileges usually resolves these issues in VDI environments.</p>
+</blockquote>
+<hr />
+<h2 id="login-to-azure-container-registry">Login to Azure Container Registry</h2>
+<p>Before pulling images from Azure Container Registry (ACR), you need to authenticate with Azure first.</p>
+<blockquote>
+<p><strong><em>WARNING:</em></strong> In VDI environments, run these commands in a <strong>normal terminal</strong> (not elevated). ACR login does not work in terminals started with administrator privileges.</p>
+</blockquote>
+<h3 id="step-1-login-to-azure">Step 1: Login to Azure</h3>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>login
+</code></pre></div>
+<p>Or use device code for remote/VDI sessions:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>login<span class="w"> </span>--use-device-code
+</code></pre></div>
+<h3 id="step-2-select-subscription">Step 2: Select Subscription</h3>
+<p>List available subscriptions and select the correct one:</p>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>account<span class="w"> </span>list<span class="w"> </span>-o<span class="w"> </span>table
+az<span class="w"> </span>account<span class="w"> </span><span class="nb">set</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;&lt;subscription-name-or-id&gt;&quot;</span>
+</code></pre></div>
+<h3 id="step-3-login-to-acr">Step 3: Login to ACR</h3>
+<div class="highlight"><pre><span></span><code>az<span class="w"> </span>acr<span class="w"> </span>login<span class="w"> </span>-n<span class="w"> </span>&lt;acr-name&gt;
+</code></pre></div>
+<h3 id="step-4-docker-login">Step 4: Docker Login</h3>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>&lt;acr-name&gt;.azurecr.io
+</code></pre></div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> ACR login tokens are valid for 3 hours. Re-run <code>az acr login</code> and <code>docker login</code> if you get authentication errors.</p>
+</blockquote>
+<h3 id="troubleshooting-docker-login-still-fails">Troubleshooting: Docker Login Still Fails</h3>
+<p>If docker login still doesn't work, edit the Docker config file:</p>
+<ul>
+<li><strong>Windows:</strong> <code>%USERPROFILE%\.docker\config.json</code></li>
+<li><strong>macOS/Linux:</strong> <code>~/.docker/config.json</code></li>
+</ul>
+<p>Change <code>credsStore</code> from:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;credsStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wincred&quot;</span><span class="p">,</span>
+</code></pre></div>
+<p>To:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;credsStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+</code></pre></div>
+<p>Then retry the docker login command.</p>
 <hr />
 <h2 id="custom-install-path-windows">Custom Install Path (Windows)</h2>
 <p>Don't double-click the installer. Use command line to specify custom paths.</p>
@@ -738,8 +1009,9 @@ start /w &quot;&quot; &quot;Docker Desktop Installer.exe&quot; install -accept-l
 </tr>
 </tbody>
 </table>
-<p>!!! note
-    Without <code>--wsl-default-data-root</code>, images still go to <code>%HOME%\AppData\Local\Docker</code></p>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> Without <code>--wsl-default-data-root</code>, images still go to <code>%HOME%\AppData\Local\Docker</code></p>
+</blockquote>
 <hr />
 <h2 id="custom-data-path-post-install">Custom Data Path (Post-Install)</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="macos_1" name="__tabbed_3" type="radio" /><input id="linux_1" name="__tabbed_3" type="radio" /><input id="windows_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="macos_1">macOS</label><label for="linux_1">Linux</label><label for="windows_1">Windows</label></div>
@@ -804,11 +1076,6 @@ docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
