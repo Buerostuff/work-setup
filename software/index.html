@@ -343,6 +343,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scoop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-install-directory-cinstallprograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Install Directory (C:\Install\Programs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#starship" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -358,6 +386,17 @@
     <span class="md-ellipsis">
       
         Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make
       
     </span>
   </a>
@@ -732,6 +771,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#scoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scoop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-install-directory-cinstallprograms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Install Directory (C:\Install\Programs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#starship" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -747,6 +814,17 @@
     <span class="md-ellipsis">
       
         Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make
       
     </span>
   </a>
@@ -936,6 +1014,11 @@
 <td><a href="https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows">Microsoft Docs</a></td>
 </tr>
 <tr>
+<td><a href="#scoop">Scoop</a></td>
+<td>Windows package manager</td>
+<td><a href="https://scoop.sh">scoop.sh</a></td>
+</tr>
+<tr>
 <td><a href="#starship">Starship</a></td>
 <td>Shell prompt</td>
 <td><a href="https://starship.rs">starship.rs</a></td>
@@ -944,6 +1027,11 @@
 <td><a href="#git">Git</a></td>
 <td>Version control</td>
 <td><a href="https://git-scm.com">git-scm.com</a></td>
+</tr>
+<tr>
+<td><a href="#make">Make</a></td>
+<td>Build automation tool</td>
+<td><a href="https://scoop.sh">scoop</a></td>
 </tr>
 <tr>
 <td><a href="#cursor">Cursor</a></td>
@@ -1023,9 +1111,45 @@
 <p><strong><em>NOTE:</em></strong> See <a href="https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows">Microsoft Docs</a> for all installation options including MSI, ZIP, and .NET Global tool.</p>
 </blockquote>
 <hr />
+<h2 id="scoop">Scoop</h2>
+<p>Windows package manager for installing dev tools.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="windows_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="windows_1">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># Install scoop</span>
+<span class="nb">Set-ExecutionPolicy</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+<span class="nb">Invoke-RestMethod</span> <span class="n">-Uri</span> <span class="n">https</span><span class="p">://</span><span class="n">get</span><span class="p">.</span><span class="n">scoop</span><span class="p">.</span><span class="n">sh</span> <span class="p">|</span> <span class="nb">Invoke-Expression</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="custom-install-directory-cinstallprograms">Custom Install Directory (C:\Install\Programs)</h3>
+<p>To install scoop packages to a custom directory instead of <code>~\scoop\apps\</code>:</p>
+<p><strong>One-time Setup (Run as Administrator):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># 1. Set the global install path environment variable</span>
+<span class="nv">$env:SCOOP_GLOBAL</span> <span class="p">=</span> <span class="s1">&#39;C:\Install\Programs&#39;</span>
+<span class="no">[Environment]</span><span class="p">::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;SCOOP_GLOBAL&#39;</span><span class="p">,</span> <span class="nv">$env:SCOOP_GLOBAL</span><span class="p">,</span> <span class="s1">&#39;Machine&#39;</span><span class="p">)</span>
+
+<span class="c"># 2. Restart terminal to apply changes</span>
+</code></pre></div>
+<p><strong>Install Packages Globally:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># Use -g flag to install to global directory</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">make</span> <span class="n">-g</span>
+</code></pre></div>
+<p><strong>Verify Installation:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c"># Check install location</span>
+<span class="n">scoop</span> <span class="n">which</span> <span class="n">make</span>
+
+<span class="c"># Test</span>
+<span class="n">make</span> <span class="p">-</span><span class="n">-version</span>
+</code></pre></div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> Global installs (<code>-g</code>) go to <code>C:\Install\Programs</code>. Regular installs go to <code>~\scoop\apps\</code>. PATH is automatically updated by scoop.</p>
+</blockquote>
+<hr />
 <h2 id="starship">Starship</h2>
 <p>Cross-shell prompt with customization.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="windows_1" name="__tabbed_2" type="radio" /><input id="macos_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="windows_1">Windows</label><label for="macos_1">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="windows_2" name="__tabbed_3" type="radio" /><input id="macos_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="windows_2">Windows</label><label for="macos_1">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1047,7 +1171,7 @@
 <hr />
 <h2 id="git">Git</h2>
 <p>Version control system.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="windows_2" name="__tabbed_3" type="radio" /><input id="macos_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="windows_2">Windows</label><label for="macos_2">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="windows_3" name="__tabbed_4" type="radio" /><input id="macos_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="windows_3">Windows</label><label for="macos_2">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1067,9 +1191,38 @@
 <p><strong><em>NOTE:</em></strong> See <a href="../git-ssh-setup/">Git SSH Setup</a> for SSH configuration.</p>
 </blockquote>
 <hr />
+<h2 id="make">Make</h2>
+<p>Build automation tool commonly used for compiling code and running tasks.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="windows_4" name="__tabbed_5" type="radio" /><input id="macos_3" name="__tabbed_5" type="radio" /><input id="linux" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="windows_4">Windows</label><label for="macos_3">macOS</label><label for="linux">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># scoop (recommended)</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">make</span>
+
+<span class="c"># scoop global (to custom directory)</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">make</span> <span class="n">-g</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Included with Xcode Command Line Tools</span>
+xcode-select<span class="w"> </span>--install
+
+<span class="c1"># Or via brew</span>
+brew<span class="w"> </span>install<span class="w"> </span>make
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Usually pre-installed, otherwise:</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>make<span class="w">      </span><span class="c1"># Debian/Ubuntu</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>make<span class="w">      </span><span class="c1"># Fedora</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
 <h2 id="cursor">Cursor</h2>
 <p>AI-powered code editor built on VS Code.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="windows_3" name="__tabbed_4" type="radio" /><input id="macos_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="windows_3">Windows</label><label for="macos_3">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="windows_5" name="__tabbed_6" type="radio" /><input id="macos_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="windows_5">Windows</label><label for="macos_4">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1088,7 +1241,7 @@
 <hr />
 <h2 id="vs-code">VS Code</h2>
 <p>Code editor by Microsoft.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="windows_4" name="__tabbed_5" type="radio" /><input id="macos_4" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="windows_4">Windows</label><label for="macos_4">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="windows_6" name="__tabbed_7" type="radio" /><input id="macos_5" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="windows_6">Windows</label><label for="macos_5">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1107,7 +1260,7 @@
 <hr />
 <h2 id="mssql-extension-vs-code">MSSQL Extension (VS Code)</h2>
 <p>SQL Server extension for VS Code. Replaces Azure Data Studio (discontinued).</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="vs-code_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="vs-code_1">VS Code</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="vs-code_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="vs-code_1">VS Code</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
@@ -1128,7 +1281,7 @@
 <hr />
 <h2 id="docker">Docker</h2>
 <p>Container platform for building and running applications.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="windows_5" name="__tabbed_7" type="radio" /><input id="macos_5" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="windows_5">Windows</label><label for="macos_5">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="windows_7" name="__tabbed_9" type="radio" /><input id="macos_6" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="windows_7">Windows</label><label for="macos_6">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1150,7 +1303,7 @@
 <hr />
 <h2 id="nodejs">Node.js</h2>
 <p>JavaScript runtime.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="windows_6" name="__tabbed_8" type="radio" /><input id="macos_6" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="windows_6">Windows</label><label for="macos_6">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="windows_8" name="__tabbed_10" type="radio" /><input id="macos_7" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="windows_8">Windows</label><label for="macos_7">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1169,7 +1322,7 @@
 <hr />
 <h2 id="python">Python</h2>
 <p>Programming language.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="windows_7" name="__tabbed_9" type="radio" /><input id="macos_7" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="windows_7">Windows</label><label for="macos_7">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="windows_9" name="__tabbed_11" type="radio" /><input id="macos_8" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="windows_9">Windows</label><label for="macos_8">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1188,7 +1341,7 @@
 <hr />
 <h2 id="go">Go</h2>
 <p>Programming language by Google.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="windows_8" name="__tabbed_10" type="radio" /><input id="macos_8" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="windows_8">Windows</label><label for="macos_8">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="windows_10" name="__tabbed_12" type="radio" /><input id="macos_9" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="windows_10">Windows</label><label for="macos_9">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1207,7 +1360,7 @@
 <hr />
 <h2 id="greenshot">Greenshot</h2>
 <p>Screenshot tool for Windows.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="windows_9" name="__tabbed_11" type="radio" /><input id="macos_9" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="windows_9">Windows</label><label for="macos_9">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="windows_11" name="__tabbed_13" type="radio" /><input id="macos_10" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="windows_11">Windows</label><label for="macos_10">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1228,7 +1381,7 @@
 <hr />
 <h2 id="espanso">Espanso</h2>
 <p>Cross-platform text expander and snippet manager.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="windows_10" name="__tabbed_12" type="radio" /><input id="macos_10" name="__tabbed_12" type="radio" /><input id="linux" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="windows_10">Windows</label><label for="macos_10">macOS</label><label for="linux">Linux</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:3"><input checked="checked" id="windows_12" name="__tabbed_14" type="radio" /><input id="macos_11" name="__tabbed_14" type="radio" /><input id="linux_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="windows_12">Windows</label><label for="macos_11">macOS</label><label for="linux_1">Linux</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
@@ -1258,7 +1411,7 @@ sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> 
 <hr />
 <h2 id="typora">Typora</h2>
 <p>Markdown editor with live preview.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="windows_11" name="__tabbed_13" type="radio" /><input id="macos_11" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="windows_11">Windows</label><label for="macos_11">macOS</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="windows_13" name="__tabbed_15" type="radio" /><input id="macos_12" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="windows_13">Windows</label><label for="macos_12">macOS</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c"># winget</span>
