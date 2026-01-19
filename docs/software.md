@@ -9,6 +9,7 @@
 | [Git](#git) | Version control | [git-scm.com](https://git-scm.com) |
 | [Cursor](#cursor) | AI-powered code editor | [cursor.com](https://cursor.com) |
 | [VS Code](#vs-code) | Code editor | [code.visualstudio.com](https://code.visualstudio.com) |
+| [MSSQL Extension](#mssql-extension-vs-code) | SQL Server for VS Code | [Microsoft Docs](https://learn.microsoft.com/en-us/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code) |
 | [Docker](#docker) | Container platform | [docker.com](https://www.docker.com/products/docker-desktop) |
 | [Node.js](#nodejs) | JavaScript runtime | [nodejs.org](https://nodejs.org) |
 | [Python](#python) | Programming language | [python.org](https://www.python.org/downloads) |
@@ -138,6 +139,27 @@ Code editor by Microsoft.
     ```bash
     brew install --cask visual-studio-code
     ```
+
+---
+
+## MSSQL Extension (VS Code)
+
+SQL Server extension for VS Code. Replaces Azure Data Studio (discontinued).
+
+=== "VS Code"
+
+    1. Open VS Code
+    2. Press `Ctrl+Shift+X` (Extensions)
+    3. Search for `mssql`
+    4. Install **SQL Server (mssql)**
+
+    Or via command line:
+
+    ```powershell
+    code --install-extension ms-mssql.mssql
+    ```
+
+> **_NOTE:_** Azure Data Studio is no longer being developed. Use the MSSQL extension in VS Code instead. See [Microsoft Docs](https://learn.microsoft.com/en-us/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code) for details.
 
 ---
 
