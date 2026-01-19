@@ -1,18 +1,26 @@
 site_name: Work Setup
 site_url: https://buerostuff.github.io/work-setup
-repo_url: https://github.com/buerostuff/work-setup
+
+extra:
+  generator: false
+  homepage: /work-setup/
 
 theme:
   name: material
+  icon:
+    logo: material/console
+  font:
+    text: Fira Sans
+    code: Fira Code
   palette:
     - scheme: slate
-      primary: deep purple
+      primary: teal
       accent: amber
       toggle:
         icon: material/brightness-4
         name: Light mode
     - scheme: default
-      primary: deep purple
+      primary: teal
       accent: amber
       toggle:
         icon: material/brightness-7
