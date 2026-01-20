@@ -1,4 +1,4 @@
-# Git Commands
+# Git Commands Reference
 
 ## Clone
 
@@ -44,98 +44,160 @@ If you already have a local project with `git init`, connect it to GitHub:
 
 ---
 
-## Daily
+## Branch Management
 
-| Command | What it does |
-|---------|--------------|
-| `git status` | Shows which files are changed, staged, or untracked |
-| `git add -A` | Stages all changes (new, modified, deleted files) |
-| `git commit -m "message"` | Saves staged changes with a description |
-| `git push` | Uploads your commits to GitHub |
-| `git pull` | Downloads latest changes from GitHub |
+| Command | Description |
+|---------|-------------|
+| `git switch <branch>` | Switch to an existing branch |
+| `git switch -c <branch>` | Create and switch to a new branch |
+| `git switch -` | Switch to the previous branch |
+| `git branch` | List local branches |
+| `git branch -a` | List all branches (local and remote) |
+| `git branch -d <branch>` | Delete a branch (safe, checks if merged) |
+| `git branch -D <branch>` | Force delete a branch (even if not merged) |
+| `git branch -m <old> <new>` | Rename a branch |
 
-```bash
-git status
-git add -A && git commit -m "message"
-git push
-git pull
-```
+### Flags for `git switch`
+
+| Flag | Description |
+|------|-------------|
+| `-c` | Create a new branch and switch to it |
+| `-` | Switch to the previously checked out branch |
+| `--discard-changes` | Discard local changes when switching |
 
 ---
 
-## Branching
+## Committing
 
-| Command | What it does |
-|---------|--------------|
-| `git branch` | Lists all local branches |
-| `git switch <branch>` | Switches to an existing branch |
-| `git switch -c <branch>` | Creates a new branch and switches to it |
-| `git checkout <branch>` | Old way to switch branches (still works) |
-| `git checkout -b <branch>` | Old way to create & switch (still works) |
-| `git branch -d <branch>` | Deletes a local branch |
-| `git push origin -d <branch>` | Deletes a branch on GitHub |
+| Command | Description |
+|---------|-------------|
+| `git add .` | Stage all changes in current directory |
+| `git add -A` | Stage all changes (entire repo) |
+| `git add <file>` | Stage a specific file |
+| `git commit -m "message"` | Commit with a message |
+| `git status` | Show working tree status |
+| `git diff` | Show unstaged changes |
+
+### One-liner (Add + Commit)
 
 ```bash
-# Recommended (git switch)
-git branch                    # list all branches
-git switch <branch>           # switch to branch
-git switch -c <branch>        # create & switch
-
-# Alternative (git checkout)
-git checkout <branch>         # switch to branch
-git checkout -b <branch>      # create & switch
-
-# Delete
-git branch -d <branch>        # delete local
-git push origin -d <branch>   # delete remote
+git add -A && git commit -m "Your message here"
 ```
+
+Or using PowerShell 5.x (use semicolon):
+
+```powershell
+git add -A; git commit -m "Your message here"
+```
+
+### Flags for `git add`
+
+| Flag | Description |
+|------|-------------|
+| `-A` | Stage **all** changes (new, modified, deleted) in entire repo |
+| `.` | Stage all changes in current directory and subdirectories |
+| `-p` | Interactive staging (choose which hunks to stage) |
+| `-u` | Stage only modified and deleted files (not new files) |
+
+### Flags for `git commit`
+
+| Flag | Description |
+|------|-------------|
+| `-m "message"` | Provide commit message inline |
+| `-a` | Automatically stage modified files (not new files) |
+| `-am "message"` | Combine `-a` and `-m` (stage modified + commit) |
+| `--amend` | Modify the last commit |
+
+---
+
+## Merging
+
+| Command | Description |
+|---------|-------------|
+| `git merge <branch>` | Merge a branch into current branch |
+| `git merge --abort` | Cancel a merge in progress |
+
+### Flags for `git merge`
+
+| Flag | Description |
+|------|-------------|
+| `--no-ff` | Create a merge commit even for fast-forward |
+| `--abort` | Abort the current merge operation |
+| `--squash` | Squash all commits into one (no auto-commit) |
+
+---
+
+## Remote Operations
+
+| Command | Description |
+|---------|-------------|
+| `git pull origin <branch>` | Fetch and merge from remote |
+| `git push origin <branch>` | Push branch to remote |
+| `git push -u origin <branch>` | Push and set upstream tracking |
+| `git push origin --delete <branch>` | Delete a remote branch |
+
+### Flags for `git push`
+
+| Flag | Description |
+|------|-------------|
+| `-u` | Set upstream tracking for the branch |
+| `--delete` | Delete a branch on the remote |
+
+### Flags for `git pull`
+
+| Flag | Description |
+|------|-------------|
+| `--rebase` | Rebase instead of merge when pulling |
 
 ---
 
 ## Stash
 
-| Command | What it does |
-|---------|--------------|
-| `git stash` | Temporarily saves your uncommitted changes |
-| `git stash pop` | Restores your stashed changes and removes from stash |
-| `git stash list` | Shows all stashed changes |
-
-```bash
-git stash
-git stash pop
-git stash list
-```
+| Command | Description |
+|---------|-------------|
+| `git stash` | Temporarily save uncommitted changes |
+| `git stash pop` | Restore stashed changes and remove from stash |
+| `git stash list` | Show all stashed changes |
+| `git stash drop` | Delete most recent stash |
 
 ---
 
 ## Undo
 
-| Command | What it does |
-|---------|--------------|
-| `git restore <file>` | Discards changes in a file (back to last commit) |
-| `git restore --staged <file>` | Unstages a file (keeps changes in working directory) |
-| `git reset --soft HEAD~1` | Undoes last commit but keeps changes staged |
-| `git reset --hard HEAD~1` | Undoes last commit and discards all changes |
-| `git commit --amend` | Edits the last commit message or adds forgotten files |
+| Command | Description |
+|---------|-------------|
+| `git restore <file>` | Discard changes in a file (back to last commit) |
+| `git restore --staged <file>` | Unstage a file (keeps changes in working directory) |
+| `git reset --soft HEAD~1` | Undo last commit but keep changes staged |
+| `git reset --hard HEAD~1` | Undo last commit and discard all changes |
+| `git commit --amend` | Edit the last commit message or add forgotten files |
 
-```bash
-git restore <file>            # discard changes
-git restore --staged <file>   # unstage
-git reset --soft HEAD~1       # undo commit, keep staged
-git reset --hard HEAD~1       # undo commit, discard all
-git commit --amend            # edit last commit
-```
+---
+
+## Tagging (for releases)
+
+| Command | Description |
+|---------|-------------|
+| `git tag -a v1.0.0 -m "message"` | Create an annotated tag |
+| `git push origin v1.0.0` | Push a tag to remote |
+| `git tag` | List all tags |
+| `git tag -d v1.0.0` | Delete a local tag |
+
+### Flags for `git tag`
+
+| Flag | Description |
+|------|-------------|
+| `-a` | Create an annotated tag |
+| `-m "message"` | Tag message |
+| `-d` | Delete a tag |
 
 ---
 
 ## Log
 
-| Command | What it does |
-|---------|--------------|
-| `git log --oneline` | Shows commit history in one line per commit |
-| `git log --oneline --graph --all` | Shows visual branch history with all branches |
-
-```bash
-git log --oneline
-git log --oneline --graph --all
-```
+| Command | Description |
+|---------|-------------|
+| `git log --oneline` | Compact commit history |
+| `git log --oneline --graph --all` | Visual branch history |
+| `git log -n 5` | Show last 5 commits |
+| `git log --author="name"` | Filter by author |

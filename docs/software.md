@@ -5,8 +5,10 @@
 | Software | Description | Download |
 |----------|-------------|----------|
 | [PowerShell](#powershell) | Modern shell | [Microsoft Docs](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows) |
+| [Scoop](#scoop) | Windows package manager | [scoop.sh](https://scoop.sh) |
 | [Starship](#starship) | Shell prompt | [starship.rs](https://starship.rs) |
 | [Git](#git) | Version control | [git-scm.com](https://git-scm.com) |
+| [Make](#make) | Build automation tool | [scoop](https://scoop.sh) |
 | [Cursor](#cursor) | AI-powered code editor | [cursor.com](https://cursor.com) |
 | [VS Code](#vs-code) | Code editor | [code.visualstudio.com](https://code.visualstudio.com) |
 | [MSSQL Extension](#mssql-extension-vs-code) | SQL Server for VS Code | [Microsoft Docs](https://learn.microsoft.com/en-us/sql/tools/visual-studio-code-extensions/mssql/mssql-extension-visual-studio-code) |
@@ -47,6 +49,53 @@ Modern cross-platform shell.
     ```
 
 > **_NOTE:_** See [Microsoft Docs](https://learn.microsoft.com/en-us/powershell/scripting/install/install-powershell-on-windows) for all installation options including MSI, ZIP, and .NET Global tool.
+
+---
+
+## Scoop
+
+Windows package manager for installing dev tools.
+
+=== "Windows"
+
+    ```powershell
+    # Install scoop
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+    ```
+
+### Custom Install Directory (C:\Install\Programs)
+
+To install scoop packages to a custom directory instead of `~\scoop\apps\`:
+
+**One-time Setup (Run as Administrator):**
+
+```powershell
+# 1. Set the global install path environment variable
+$env:SCOOP_GLOBAL = 'C:\Install\Programs'
+[Environment]::SetEnvironmentVariable('SCOOP_GLOBAL', $env:SCOOP_GLOBAL, 'Machine')
+
+# 2. Restart terminal to apply changes
+```
+
+**Install Packages Globally:**
+
+```powershell
+# Use -g flag to install to global directory
+scoop install make -g
+```
+
+**Verify Installation:**
+
+```powershell
+# Check install location
+scoop which make
+
+# Test
+make --version
+```
+
+> **_NOTE:_** Global installs (`-g`) go to `C:\Install\Programs`. Regular installs go to `~\scoop\apps\`. PATH is automatically updated by scoop.
 
 ---
 
@@ -95,6 +144,40 @@ Version control system.
     ```
 
 > **_NOTE:_** See [Git SSH Setup](git-ssh-setup.md) for SSH configuration.
+
+---
+
+## Make
+
+Build automation tool commonly used for compiling code and running tasks.
+
+=== "Windows"
+
+    ```powershell
+    # scoop (recommended)
+    scoop install make
+
+    # scoop global (to custom directory)
+    scoop install make -g
+    ```
+
+=== "macOS"
+
+    ```bash
+    # Included with Xcode Command Line Tools
+    xcode-select --install
+
+    # Or via brew
+    brew install make
+    ```
+
+=== "Linux"
+
+    ```bash
+    # Usually pre-installed, otherwise:
+    sudo apt install make      # Debian/Ubuntu
+    sudo dnf install make      # Fedora
+    ```
 
 ---
 

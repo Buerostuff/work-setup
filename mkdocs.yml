@@ -43,6 +43,7 @@ nav:
   - Home: index.md
   - Software: software.md
   - Git SSH Setup: git-ssh-setup.md
+  - Git Workflow: git-workflow.md
   - Git Commands: git-commands.md
   - Docker: docker-setup.md
   - Azure CLI: azure-cli.md
