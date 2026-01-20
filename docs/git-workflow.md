@@ -60,7 +60,14 @@ git merge integration
 git push origin main
 ```
 
-### 6. Cleanup
+### 6. Tag the Release
+
+```bash
+git tag -a v1.0.0 -m "First production release"
+git push origin v1.0.0
+```
+
+### 7. Cleanup
 
 ```bash
 git branch -d feature/my-feature
@@ -86,6 +93,84 @@ feature/xyz → integration → main
 4. **Merge early, merge often** — small merges are easier than large ones
 5. **Pull before merge** — always update your branch before merging
 6. **Update long-running feature branches** — merge `integration` into your feature branch regularly
+
+---
+
+## Git Tags (Version Releases)
+
+### What Are Tags?
+
+Tags are **permanent bookmarks** to specific commits — used to mark production releases.
+
+### Why Tags Instead of Branches?
+
+| Feature | Branch | Tag |
+|---------|--------|-----|
+| Moves with new commits | ✅ Yes | ❌ No (stays fixed) |
+| Points to latest code | ✅ Yes | ❌ No |
+| Marks a specific release | ❌ No | ✅ Yes |
+| Creates GitHub Releases | ❌ No | ✅ Yes |
+
+**Example:**
+
+```
+main → [commit C] → [commit B] → [commit A]
+                         ↑
+                      v1.0.0 (stays here forever)
+```
+
+Even after 100 more commits, `v1.0.0` still points to commit B.
+
+### Version Numbering
+
+```
+v1.0.0 → First release
+v1.0.1 → Bug fix (patch)
+v1.1.0 → New feature (minor)
+v2.0.0 → Breaking changes (major)
+```
+
+| Version Part | When to Increment |
+|--------------|-------------------|
+| **Major** (v**2**.0.0) | Breaking changes, major rewrites |
+| **Minor** (v1.**1**.0) | New features, backwards compatible |
+| **Patch** (v1.0.**1**) | Bug fixes, small improvements |
+
+### When to Tag
+
+| Situation | Action |
+|-----------|--------|
+| Code tested & merged to `main` | Create tag `v1.0.0` |
+| Hotfix deployed | Create tag `v1.0.1` |
+| New feature released | Create tag `v1.1.0` |
+
+### Tag Commands
+
+```bash
+# Create annotated tag
+git tag -a v1.0.0 -m "First production release"
+
+# Push tag to GitHub
+git push origin v1.0.0
+
+# List all tags
+git tag
+
+# Delete local tag
+git tag -d v1.0.0
+
+# Delete remote tag
+git push origin --delete v1.0.0
+```
+
+### Benefits of Tagging
+
+1. **Rollback easily** — if v1.1.0 breaks, checkout v1.0.0
+2. **GitHub Releases** — tags become downloadable releases with assets
+3. **Track production** — always know exactly which code is live
+4. **CI/CD triggers** — many pipelines auto-deploy when a tag is pushed
+
+> **_TIP:_** Tag it when it hits production! 🚀
 
 ---
 
