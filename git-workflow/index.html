@@ -453,10 +453,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-cleanup" class="md-nav__link">
+  <a href="#6-tag-the-release" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Cleanup
+        6. Tag the Release
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Cleanup
       
     </span>
   </a>
@@ -487,6 +498,89 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-tags-version-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git Tags (Version Releases)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Tags (Version Releases)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Tags?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-tags-instead-of-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Tags Instead of Branches?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-numbering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Numbering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Tag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tag Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-tagging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefits of Tagging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -832,10 +926,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-cleanup" class="md-nav__link">
+  <a href="#6-tag-the-release" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Cleanup
+        6. Tag the Release
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Cleanup
       
     </span>
   </a>
@@ -866,6 +971,89 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-tags-version-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git Tags (Version Releases)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Tags (Version Releases)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Tags?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-tags-instead-of-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Tags Instead of Branches?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-numbering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Numbering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Tag
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tag Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefits-of-tagging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefits of Tagging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1040,7 +1228,11 @@ git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </
 git<span class="w"> </span>merge<span class="w"> </span>integration
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
-<h3 id="6-cleanup">6. Cleanup</h3>
+<h3 id="6-tag-the-release">6. Tag the Release</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;First production release&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
+</code></pre></div>
+<h3 id="7-cleanup">7. Cleanup</h3>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/my-feature
 </code></pre></div>
 <hr />
@@ -1059,6 +1251,125 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <li><strong>Pull before merge</strong> — always update your branch before merging</li>
 <li><strong>Update long-running feature branches</strong> — merge <code>integration</code> into your feature branch regularly</li>
 </ol>
+<hr />
+<h2 id="git-tags-version-releases">Git Tags (Version Releases)</h2>
+<h3 id="what-are-tags">What Are Tags?</h3>
+<p>Tags are <strong>permanent bookmarks</strong> to specific commits — used to mark production releases.</p>
+<h3 id="why-tags-instead-of-branches">Why Tags Instead of Branches?</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Branch</th>
+<th>Tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moves with new commits</td>
+<td>✅ Yes</td>
+<td>❌ No (stays fixed)</td>
+</tr>
+<tr>
+<td>Points to latest code</td>
+<td>✅ Yes</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Marks a specific release</td>
+<td>❌ No</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Creates GitHub Releases</td>
+<td>❌ No</td>
+<td>✅ Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>main → [commit C] → [commit B] → [commit A]
+                         ↑
+                      v1.0.0 (stays here forever)
+</code></pre></div>
+<p>Even after 100 more commits, <code>v1.0.0</code> still points to commit B.</p>
+<h3 id="version-numbering">Version Numbering</h3>
+<div class="highlight"><pre><span></span><code>v1.0.0 → First release
+v1.0.1 → Bug fix (patch)
+v1.1.0 → New feature (minor)
+v2.0.0 → Breaking changes (major)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Version Part</th>
+<th>When to Increment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Major</strong> (v<strong>2</strong>.0.0)</td>
+<td>Breaking changes, major rewrites</td>
+</tr>
+<tr>
+<td><strong>Minor</strong> (v1.<strong>1</strong>.0)</td>
+<td>New features, backwards compatible</td>
+</tr>
+<tr>
+<td><strong>Patch</strong> (v1.0.<strong>1</strong>)</td>
+<td>Bug fixes, small improvements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-tag">When to Tag</h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code tested &amp; merged to <code>main</code></td>
+<td>Create tag <code>v1.0.0</code></td>
+</tr>
+<tr>
+<td>Hotfix deployed</td>
+<td>Create tag <code>v1.0.1</code></td>
+</tr>
+<tr>
+<td>New feature released</td>
+<td>Create tag <code>v1.1.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tag-commands">Tag Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create annotated tag</span>
+git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;First production release&quot;</span>
+
+<span class="c1"># Push tag to GitHub</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0.0
+
+<span class="c1"># List all tags</span>
+git<span class="w"> </span>tag
+
+<span class="c1"># Delete local tag</span>
+git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>v1.0.0
+
+<span class="c1"># Delete remote tag</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>v1.0.0
+</code></pre></div>
+<h3 id="benefits-of-tagging">Benefits of Tagging</h3>
+<ol>
+<li><strong>Rollback easily</strong> — if v1.1.0 breaks, checkout v1.0.0</li>
+<li><strong>GitHub Releases</strong> — tags become downloadable releases with assets</li>
+<li><strong>Track production</strong> — always know exactly which code is live</li>
+<li><strong>CI/CD triggers</strong> — many pipelines auto-deploy when a tag is pushed</li>
+</ol>
+<blockquote>
+<p><strong><em>TIP:</em></strong> Tag it when it hits production! 🚀</p>
+</blockquote>
 <hr />
 <h2 id="handling-multiple-features">Handling Multiple Features</h2>
 <p>If you need to pause a feature:</p>
