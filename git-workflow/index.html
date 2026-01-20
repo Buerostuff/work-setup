@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://buerostuff.github.io/work-setup/docker-setup/">
+        <link rel="canonical" href="https://buerostuff.github.io/work-setup/git-workflow/">
       
       
-        <link rel="prev" href="../git-commands/">
+        <link rel="prev" href="../git-ssh-setup/">
       
       
-        <link rel="next" href="../azure-cli/">
+        <link rel="next" href="../git-commands/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Docker - Work Setup</title>
+        <title>Git Workflow - Work Setup</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-setup" class="md-skip">
+        <a href="#git-workflow-for-professional-developers" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Docker
+              Git Workflow
             
           </span>
         </div>
@@ -312,10 +312,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../git-workflow/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Workflow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -331,6 +358,236 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#branch-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branch Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workflow Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-start-new-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Start New Work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-develop-and-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Develop and Commit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-merge-to-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Merge to Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-release-to-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Release to Production
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cleanup
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-multiple-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling Multiple Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolving Merge Conflicts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-keybindings-for-conflict-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vim Keybindings for Conflict Resolution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Keybindings for Conflict Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation-normal-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation (Normal mode)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-normal-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing (Normal mode)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-and-quit-normal-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save and Quit (Normal mode)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-conflict-resolution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Conflict Resolution Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -366,37 +623,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Docker
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../docker-setup/" class="md-nav__link">
         
   
   
@@ -412,203 +642,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-docker-in-vdi-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Running Docker in VDI Environment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Running Docker in VDI Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-right-click-docker-desktop" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Right-click Docker Desktop
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-provide-elevation-reason" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Provide Elevation Reason
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-confirmation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Confirmation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#login-to-azure-container-registry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Login to Azure Container Registry
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Login to Azure Container Registry">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-login-to-azure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Login to Azure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-select-subscription" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Select Subscription
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-login-to-acr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Login to ACR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-docker-login" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Docker Login
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#troubleshooting-docker-login-still-fails" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting: Docker Login Still Fails
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-install-path-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custom Install Path (Windows)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-data-path-post-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custom Data Path (Post-Install)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compose
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -721,10 +754,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
+  <a href="#branch-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation
+        Branch Structure
       
     </span>
   </a>
@@ -732,22 +765,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-docker-in-vdi-environment" class="md-nav__link">
+  <a href="#workflow-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Running Docker in VDI Environment
+        Workflow Steps
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Running Docker in VDI Environment">
+    <nav class="md-nav" aria-label="Workflow Steps">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-right-click-docker-desktop" class="md-nav__link">
+  <a href="#1-start-new-work" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Right-click Docker Desktop
+        1. Start New Work
       
     </span>
   </a>
@@ -755,10 +788,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-provide-elevation-reason" class="md-nav__link">
+  <a href="#2-develop-and-commit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Provide Elevation Reason
+        2. Develop and Commit
       
     </span>
   </a>
@@ -766,10 +799,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-confirmation" class="md-nav__link">
+  <a href="#3-merge-to-integration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Confirmation
+        3. Merge to Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-release-to-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Release to Production
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cleanup
       
     </span>
   </a>
@@ -782,22 +848,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#login-to-azure-container-registry" class="md-nav__link">
+  <a href="#visual-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Login to Azure Container Registry
+        Visual Workflow
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Login to Azure Container Registry">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-multiple-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handling Multiple Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolving Merge Conflicts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-keybindings-for-conflict-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vim Keybindings for Conflict Resolution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vim Keybindings for Conflict Resolution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-login-to-azure" class="md-nav__link">
+  <a href="#modes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Login to Azure
+        Modes
       
     </span>
   </a>
@@ -805,10 +915,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-select-subscription" class="md-nav__link">
+  <a href="#navigation-normal-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Select Subscription
+        Navigation (Normal mode)
       
     </span>
   </a>
@@ -816,10 +926,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-login-to-acr" class="md-nav__link">
+  <a href="#editing-normal-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Login to ACR
+        Editing (Normal mode)
       
     </span>
   </a>
@@ -827,10 +937,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-docker-login" class="md-nav__link">
+  <a href="#save-and-quit-normal-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Docker Login
+        Save and Quit (Normal mode)
       
     </span>
   </a>
@@ -838,10 +948,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#troubleshooting-docker-login-still-fails" class="md-nav__link">
+  <a href="#quick-conflict-resolution-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting: Docker Login Still Fails
+        Quick Conflict Resolution Workflow
       
     </span>
   </a>
@@ -850,50 +960,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-install-path-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custom Install Path (Windows)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-data-path-post-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Custom Data Path (Post-Install)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compose
-      
-    </span>
-  </a>
   
 </li>
       
@@ -914,165 +980,279 @@
 
 
 
-<h1 id="docker-setup">Docker Setup</h1>
-<h2 id="installation">Installation</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="macos" name="__tabbed_1" type="radio" /><input id="linux" name="__tabbed_1" type="radio" /><input id="windows" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="macos">macOS</label><label for="linux">Linux</label><label for="windows">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>docker
+<h1 id="git-workflow-for-professional-developers">Git Workflow for Professional Developers</h1>
+<h2 id="branch-structure">Branch Structure</h2>
+<div class="highlight"><pre><span></span><code>main
+  └── integration
+        ├── feature/xyz
+        ├── feature/abc
+        └── fix/bug-123
 </code></pre></div>
-<p>Or download from <a href="https://www.docker.com/products/docker-desktop">docker.com</a></p>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
-<span class="c1"># logout and login</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
-<span class="n">winget</span> <span class="n">install</span> <span class="n">Docker</span><span class="p">.</span><span class="n">DockerDesktop</span>
-
-<span class="c"># scoop</span>
-<span class="n">scoop</span> <span class="n">install</span> <span class="n">docker</span>
-</code></pre></div>
-<p>Or download from <a href="https://www.docker.com/products/docker-desktop">docker.com</a></p>
-</div>
-</div>
-</div>
-<hr />
-<h2 id="running-docker-in-vdi-environment">Running Docker in VDI Environment</h2>
-<p>In corporate VDI (Virtual Desktop Infrastructure) environments, Docker Desktop may require elevated privileges to run properly.</p>
-<h3 id="step-1-right-click-docker-desktop">Step 1: Right-click Docker Desktop</h3>
-<p>Right-click the Docker Desktop shortcut and select <strong>Run with Administrator Privileges</strong>.</p>
-<p><img alt="Docker Admin Menu" src="../assets/images/docker-admin-menu.png" /></p>
-<h3 id="step-2-provide-elevation-reason">Step 2: Provide Elevation Reason</h3>
-<p>A Privilege Elevation dialog will appear. Enter a reason (e.g., "Development work") and click <strong>Continue</strong>.</p>
-<p><img alt="Privilege Elevation Dialog" src="../assets/images/docker-privilege-dialog.png" /></p>
-<h3 id="step-3-confirmation">Step 3: Confirmation</h3>
-<p>You'll see a confirmation that Docker is now running with administrator privileges.</p>
-<p><img alt="Privilege Elevated Successfully" src="../assets/images/docker-privilege-success.png" /></p>
-<blockquote>
-<p><strong><em>TIP:</em></strong> If Docker fails to start containers or shows permission errors, running with elevated privileges usually resolves these issues in VDI environments.</p>
-</blockquote>
-<hr />
-<h2 id="login-to-azure-container-registry">Login to Azure Container Registry</h2>
-<p>Before pulling images from Azure Container Registry (ACR), you need to authenticate with Azure first.</p>
-<blockquote>
-<p><strong><em>WARNING:</em></strong> In VDI environments, run these commands in a <strong>normal terminal</strong> (not elevated). ACR login does not work in terminals started with administrator privileges.</p>
-</blockquote>
-<h3 id="step-1-login-to-azure">Step 1: Login to Azure</h3>
-<div class="highlight"><pre><span></span><code>az<span class="w"> </span>login
-</code></pre></div>
-<p>Or use device code for remote/VDI sessions:</p>
-<div class="highlight"><pre><span></span><code>az<span class="w"> </span>login<span class="w"> </span>--use-device-code
-</code></pre></div>
-<h3 id="step-2-select-subscription">Step 2: Select Subscription</h3>
-<p>List available subscriptions and select the correct one:</p>
-<div class="highlight"><pre><span></span><code>az<span class="w"> </span>account<span class="w"> </span>list<span class="w"> </span>-o<span class="w"> </span>table
-az<span class="w"> </span>account<span class="w"> </span><span class="nb">set</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;&lt;subscription-name-or-id&gt;&quot;</span>
-</code></pre></div>
-<h3 id="step-3-login-to-acr">Step 3: Login to ACR</h3>
-<div class="highlight"><pre><span></span><code>az<span class="w"> </span>acr<span class="w"> </span>login<span class="w"> </span>-n<span class="w"> </span>&lt;acr-name&gt;
-</code></pre></div>
-<h3 id="step-4-docker-login">Step 4: Docker Login</h3>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>login<span class="w"> </span>&lt;acr-name&gt;.azurecr.io
-</code></pre></div>
-<blockquote>
-<p><strong><em>NOTE:</em></strong> ACR login tokens are valid for 3 hours. Re-run <code>az acr login</code> and <code>docker login</code> if you get authentication errors.</p>
-</blockquote>
-<h3 id="troubleshooting-docker-login-still-fails">Troubleshooting: Docker Login Still Fails</h3>
-<p>If docker login still doesn't work, edit the Docker config file:</p>
-<ul>
-<li><strong>Windows:</strong> <code>%USERPROFILE%\.docker\config.json</code></li>
-<li><strong>macOS/Linux:</strong> <code>~/.docker/config.json</code></li>
-</ul>
-<p>Change <code>credsStore</code> from:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;credsStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wincred&quot;</span><span class="p">,</span>
-</code></pre></div>
-<p>To:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;credsStore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-</code></pre></div>
-<p>Then retry the docker login command.</p>
-<hr />
-<h2 id="custom-install-path-windows">Custom Install Path (Windows)</h2>
-<p>Don't double-click the installer. Use command line to specify custom paths.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="powershell" name="__tabbed_2" type="radio" /><input id="cmd" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="powershell">PowerShell</label><label for="cmd">CMD</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c"># Run as Administrator</span>
-<span class="nb">cd </span><span class="p">~\</span><span class="n">Downloads</span>
-<span class="nb">Start-Process</span> <span class="n">-Wait</span> <span class="n">-FilePath</span> <span class="s2">&quot;.\Docker Desktop Installer.exe&quot;</span> <span class="n">-ArgumentList</span> <span class="s2">&quot;install&quot;</span><span class="p">,</span> <span class="s2">&quot;-accept-license&quot;</span><span class="p">,</span> <span class="s2">&quot;--installation-dir=D:\Docker&quot;</span><span class="p">,</span> <span class="s2">&quot;--wsl-default-data-root=D:\Docker\images&quot;</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>:: Run as Administrator
-cd %USERPROFILE%\Downloads
-start /w &quot;&quot; &quot;Docker Desktop Installer.exe&quot; install -accept-license --installation-dir=D:\Docker --wsl-default-data-root=D:\Docker\images
-</code></pre></div>
-</div>
-</div>
-</div>
-<p><strong>Flags explained:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Flag</th>
+<th>Branch</th>
 <th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>-accept-license</code></td>
-<td>Auto-accept license agreement</td>
+<td><code>main</code></td>
+<td>Production-ready code (stable, tested)</td>
 </tr>
 <tr>
-<td><code>--installation-dir=D:\Docker</code></td>
-<td>Install Docker app to D:\Docker</td>
+<td><code>integration</code></td>
+<td>Staging area where features are merged and tested</td>
 </tr>
 <tr>
-<td><code>--wsl-default-data-root=D:\Docker\images</code></td>
-<td>Store WSL data &amp; images on D:</td>
+<td><code>feature/*</code></td>
+<td>Individual work branches for new features</td>
+</tr>
+<tr>
+<td><code>fix/*</code></td>
+<td>Bug fix branches</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong><em>NOTE:</em></strong> Without <code>--wsl-default-data-root</code>, images still go to <code>%HOME%\AppData\Local\Docker</code></p>
-</blockquote>
 <hr />
-<h2 id="custom-data-path-post-install">Custom Data Path (Post-Install)</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="macos_1" name="__tabbed_3" type="radio" /><input id="linux_1" name="__tabbed_3" type="radio" /><input id="windows_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="macos_1">macOS</label><label for="linux_1">Linux</label><label for="windows_1">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Docker Desktop → Settings → Resources → Disk image location</p>
-</div>
-<div class="tabbed-block">
-<p>Edit <code>/etc/docker/daemon.json</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;data-root&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/path/to/docker&quot;</span>
-<span class="p">}</span>
+<h2 id="workflow-steps">Workflow Steps</h2>
+<h3 id="1-start-new-work">1. Start New Work</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>switch<span class="w"> </span>integration
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>integration
+git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature/my-feature
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>docker
+<h3 id="2-develop-and-commit">2. Develop and Commit</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add feature description&quot;</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Docker Desktop → Settings → Resources → Disk image location</p>
-</div>
-</div>
-</div>
-<hr />
-<h2 id="common-commands">Common Commands</h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>ps<span class="w">                     </span><span class="c1"># running containers</span>
-docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w">                  </span><span class="c1"># all containers</span>
-docker<span class="w"> </span>images<span class="w">                 </span><span class="c1"># list images</span>
-docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-a<span class="w">        </span><span class="c1"># cleanup</span>
+<h3 id="3-merge-to-integration">3. Merge to Integration</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>switch<span class="w"> </span>integration
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>integration
+git<span class="w"> </span>merge<span class="w"> </span>feature/my-feature
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>integration
+</code></pre></div>
+<h3 id="4-test">4. Test</h3>
+<div class="highlight"><pre><span></span><code>docker-compose<span class="w"> </span>up<span class="w"> </span>--build
+</code></pre></div>
+<h3 id="5-release-to-production">5. Release to Production</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>switch<span class="w"> </span>main
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>integration
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<h3 id="6-cleanup">6. Cleanup</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/my-feature
 </code></pre></div>
 <hr />
-<h2 id="compose">Compose</h2>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-docker<span class="w"> </span>compose<span class="w"> </span>down
-docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f
+<h2 id="visual-workflow">Visual Workflow</h2>
+<div class="highlight"><pre><span></span><code>feature/xyz → integration → main
+     ↓             ↓          ↓
+  develop        test     production
 </code></pre></div>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Never work directly on <code>main</code></strong> — always go through <code>integration</code></li>
+<li><strong>Never push to <code>main</code> without testing</strong> on <code>integration</code> first</li>
+<li><strong>Keep features small and focused</strong> — easier to review and merge</li>
+<li><strong>Merge early, merge often</strong> — small merges are easier than large ones</li>
+<li><strong>Pull before merge</strong> — always update your branch before merging</li>
+<li><strong>Update long-running feature branches</strong> — merge <code>integration</code> into your feature branch regularly</li>
+</ol>
+<hr />
+<h2 id="handling-multiple-features">Handling Multiple Features</h2>
+<p>If you need to pause a feature:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Save current work</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;WIP: feature progress&quot;</span>
+
+<span class="c1"># Switch to integration, start new feature</span>
+git<span class="w"> </span>switch<span class="w"> </span>integration
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>integration
+git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>feature/urgent-fix
+
+<span class="c1"># When done, go back to original feature</span>
+git<span class="w"> </span>switch<span class="w"> </span>feature/my-feature
+git<span class="w"> </span>merge<span class="w"> </span>integration
+</code></pre></div>
+<hr />
+<h2 id="resolving-merge-conflicts">Resolving Merge Conflicts</h2>
+<p>When conflicts occur:</p>
+<ol>
+<li>Open the conflicted file</li>
+<li>Look for conflict markers:
+   <div class="highlight"><pre><span></span><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+(your branch content)
+=======
+(incoming branch content)
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name
+</code></pre></div></li>
+<li>Edit to keep desired content</li>
+<li>Delete the markers (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>)</li>
+<li>Save and commit:
+   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resolve merge conflict&quot;</span>
+</code></pre></div></li>
+</ol>
+<hr />
+<h2 id="vim-keybindings-for-conflict-resolution">Vim Keybindings for Conflict Resolution</h2>
+<h3 id="modes">Modes</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i</code></td>
+<td>Insert</td>
+<td>Start editing text</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>Normal</td>
+<td>Stop editing, navigate</td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td>Command</td>
+<td>Run commands (save, quit)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="navigation-normal-mode">Navigation (Normal mode)</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h</code> <code>j</code> <code>k</code> <code>l</code></td>
+<td>Left, Down, Up, Right</td>
+</tr>
+<tr>
+<td><code>gg</code></td>
+<td>Go to top of file</td>
+</tr>
+<tr>
+<td><code>G</code></td>
+<td>Go to bottom of file</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>Go to start of line</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>Go to end of line</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>Jump forward one word</td>
+</tr>
+<tr>
+<td><code>b</code></td>
+<td>Jump backward one word</td>
+</tr>
+<tr>
+<td><code>/text</code></td>
+<td>Search for "text"</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>Next search result</td>
+</tr>
+</tbody>
+</table>
+<h3 id="editing-normal-mode">Editing (Normal mode)</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i</code></td>
+<td>Insert before cursor</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>Insert after cursor</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>New line below and insert</td>
+</tr>
+<tr>
+<td><code>O</code></td>
+<td>New line above and insert</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>Delete character</td>
+</tr>
+<tr>
+<td><code>dd</code></td>
+<td>Delete entire line</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>Undo</td>
+</tr>
+<tr>
+<td><code>Ctrl+r</code></td>
+<td>Redo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="save-and-quit-normal-mode">Save and Quit (Normal mode)</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>:w</code></td>
+<td>Save</td>
+</tr>
+<tr>
+<td><code>:q</code></td>
+<td>Quit</td>
+</tr>
+<tr>
+<td><code>:wq</code></td>
+<td>Save and quit</td>
+</tr>
+<tr>
+<td><code>:q!</code></td>
+<td>Quit without saving</td>
+</tr>
+<tr>
+<td><code>ZZ</code></td>
+<td>Save and quit (shortcut)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quick-conflict-resolution-workflow">Quick Conflict Resolution Workflow</h3>
+<ol>
+<li>Press <code>/&lt;&lt;&lt;</code> then <code>Enter</code> to find conflict markers</li>
+<li>Press <code>dd</code> to delete the marker line</li>
+<li>Navigate with <code>j</code> and <code>k</code> to review content</li>
+<li>Delete unwanted lines with <code>dd</code></li>
+<li>Delete remaining markers (<code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>)</li>
+<li>Press <code>:wq</code> to save and exit</li>
+</ol>
 
 
 
