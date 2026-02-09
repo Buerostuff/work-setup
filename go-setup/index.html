@@ -8,25 +8,31 @@
       
       
       
+        <link rel="canonical" href="https://buerostuff.github.io/work-setup/go-setup/">
       
+      
+        <link rel="prev" href="../software/">
+      
+      
+        <link rel="next" href="../git-ssh-setup/">
       
       
         
       
       
-      <link rel="icon" href="/work-setup/assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Work Setup</title>
+        <title>Go Setup - Work Setup</title>
       
     
     
-      <link rel="stylesheet" href="/work-setup/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/work-setup/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -45,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("/work-setup/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,6 +74,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#go-setup" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Go Setup
             
           </span>
         </div>
@@ -223,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -250,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/software/" class="md-nav__link">
+      <a href="../software/" class="md-nav__link">
         
   
   
@@ -274,10 +285,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/work-setup/go-setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Go Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -293,6 +331,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#air-live-reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Air (live reload)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Air (live reload)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-air" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install Air
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-go-bin-to-path-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Add Go bin to PATH (Windows)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-verify-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Verify PATH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-initialize-air-in-your-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Initialize Air in your backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-run-air" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Run Air
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -304,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/git-ssh-setup/" class="md-nav__link">
+      <a href="../git-ssh-setup/" class="md-nav__link">
         
   
   
@@ -331,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/git-workflow/" class="md-nav__link">
+      <a href="../git-workflow/" class="md-nav__link">
         
   
   
@@ -358,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/git-commands/" class="md-nav__link">
+      <a href="../git-commands/" class="md-nav__link">
         
   
   
@@ -385,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/docker-setup/" class="md-nav__link">
+      <a href="../docker-setup/" class="md-nav__link">
         
   
   
@@ -412,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/azure-cli/" class="md-nav__link">
+      <a href="../azure-cli/" class="md-nav__link">
         
   
   
@@ -439,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/terminal-setup/" class="md-nav__link">
+      <a href="../terminal-setup/" class="md-nav__link">
         
   
   
@@ -466,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/work-setup/fonts/" class="md-nav__link">
+      <a href="../fonts/" class="md-nav__link">
         
   
   
@@ -503,6 +644,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#air-live-reload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Air (live reload)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Air (live reload)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-air" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install Air
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-go-bin-to-path-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Add Go bin to PATH (Windows)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-verify-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Verify PATH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-initialize-air-in-your-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Initialize Air in your backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-run-air" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Run Air
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -515,8 +749,87 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="go-setup">Go Setup</h1>
+<p>Installation and development workflow for Go, including Air for live reload.</p>
+<h2 id="installation">Installation</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="windows" name="__tabbed_1" type="radio" /><input id="macos" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="windows">Windows</label><label for="macos">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c"># winget</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="n">GoLang</span><span class="p">.</span><span class="n">Go</span>
+
+<span class="c"># scoop</span>
+<span class="n">scoop</span> <span class="n">install</span> <span class="n">go</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>go
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="air-live-reload">Air (live reload)</h2>
+<p><a href="https://github.com/air-verse/air">Air</a> provides live reload for Go apps during development. Follow these steps to install and use it.</p>
+<h3 id="1-install-air">1. Install Air</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="windows--powershell" name="__tabbed_2" type="radio" /><input id="macos--linux" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="windows--powershell">Windows / PowerShell</label><label for="macos--linux">macOS / Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">go</span> <span class="n">install</span> <span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">air-verse</span><span class="p">/</span><span class="n">air</span><span class="nv">@latest</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>go<span class="w"> </span>install<span class="w"> </span>github.com/air-verse/air@latest
+</code></pre></div>
+<p>Or on macOS via Homebrew:</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>go-air
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="2-add-go-bin-to-path-windows">2. Add Go bin to PATH (Windows)</h3>
+<p>The <code>air</code> binary is installed to <code>$(go env GOPATH)/bin</code> (typically <code>%USERPROFILE%\go\bin</code>). Add it to your session PATH:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$env:Path</span> <span class="p">+=</span> <span class="s2">&quot;;&quot;</span> <span class="p">+</span> <span class="p">(</span><span class="n">go</span> <span class="n">env</span> <span class="n">GOPATH</span><span class="p">)</span> <span class="p">+</span> <span class="s2">&quot;\bin&quot;</span>
+</code></pre></div>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> This only affects the current session. To make it permanent, add the same line to your PowerShell profile, or add <code>%USERPROFILE%\go\bin</code> to your user PATH in <strong>Environment Variables</strong> (System Properties → Advanced → Environment Variables).</p>
+</blockquote>
+<h3 id="3-verify-path">3. Verify PATH</h3>
+<p>Confirm that Go's <code>bin</code> directory is on your PATH:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$env:Path</span> <span class="n">-split</span> <span class="s2">&quot;;&quot;</span>
+</code></pre></div>
+<p>Check that <code>%USERPROFILE%\go\bin</code> (or the path from <code>(go env GOPATH)\bin</code>) appears in the list.</p>
+<h3 id="4-initialize-air-in-your-backend">4. Initialize Air in your backend</h3>
+<p>Go to the root folder of your backend (where <code>go.mod</code> and your Go code live) and create the Air config:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">C</span><span class="p">:\</span><span class="n">path</span><span class="p">\</span><span class="n">to</span><span class="p">\</span><span class="n">your</span><span class="p">\</span><span class="n">backend</span>
+<span class="n">air</span> <span class="n">init</span>
+</code></pre></div>
+<p>This creates a <code>.air.toml</code> file in the current directory.</p>
+<h3 id="5-run-air">5. Run Air</h3>
+<p>From the same backend root folder, run:</p>
+<div class="highlight"><pre><span></span><code><span class="n">air</span>
+</code></pre></div>
+<p>Air will build and run your app and reload when you change your code.</p>
+<blockquote>
+<p><strong><em>TIP:</em></strong> You can customize build and run behavior by editing <code>.air.toml</code>. See the <a href="https://github.com/air-verse/air">air-verse/air</a> README and <code>air_example.toml</code> in the repo for options.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -550,10 +863,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/work-setup/", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "navigation.sections"], "search": "/work-setup/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/work-setup/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
