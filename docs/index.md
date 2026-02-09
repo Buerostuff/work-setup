@@ -5,6 +5,7 @@ Personal dev environment documentation.
 | Section | Description |
 |---------|-------------|
 | [Software](software.md) | All required software & Terminal config |
+| [Go Setup](go-setup.md) | Go installation & Air live reload |
 | [Git SSH Setup](git-ssh-setup.md) | SSH over port 443 |
 | [Git Workflow](git-workflow.md) | Branch strategy & best practices |
 | [Git Commands](git-commands.md) | Command reference |

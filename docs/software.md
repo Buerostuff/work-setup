@@ -15,7 +15,7 @@
 | [Docker](#docker) | Container platform | [docker.com](https://www.docker.com/products/docker-desktop) |
 | [Node.js](#nodejs) | JavaScript runtime | [nodejs.org](https://nodejs.org) |
 | [Python](#python) | Programming language | [python.org](https://www.python.org/downloads) |
-| [Go](#go) | Programming language | [go.dev](https://go.dev/dl) |
+| [Go](go-setup.md) | Programming language & Air live reload | [go.dev](https://go.dev/dl) |
 | [Greenshot](#greenshot) | Screenshot tool | [getgreenshot.org](https://getgreenshot.org) |
 | [Espanso](#espanso) | Text expander | [espanso.org](https://espanso.org) |
 | [Typora](#typora) | Markdown editor | [typora.io](https://typora.io) |
@@ -316,23 +316,9 @@ Programming language.
 
 ## Go
 
-Programming language by Google.
+Programming language by Google. Includes Air for live reload during development.
 
-=== "Windows"
-
-    ```powershell
-    # winget
-    winget install GoLang.Go
-
-    # scoop
-    scoop install go
-    ```
-
-=== "macOS"
-
-    ```bash
-    brew install go
-    ```
+> **_NOTE:_** See [Go Setup](go-setup.md) for installation and Air live reload setup.
 
 ---
 
