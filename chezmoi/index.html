@@ -467,21 +467,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-machine-types" class="md-nav__link">
+  <a href="#2-profiles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Machine types
+        2. Profiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-dotfiles-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Dotfiles per profile
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-repo-layout" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22-programs-per-profile" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Repo layout
+        2.2 Programs per profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-is-in-the-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. What is in the repo
       
     </span>
   </a>
@@ -501,10 +529,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-get-chezmoi" class="md-nav__link">
+  <a href="#41-get-git-chezmoi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 Get chezmoi
+        4.1 Get git + chezmoi
       
     </span>
   </a>
@@ -512,10 +540,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-pull-the-repo-https-no-ssh-key-needed-yet" class="md-nav__link">
+  <a href="#42-pull-the-repo-and-pick-the-profile-https-no-ssh-key-needed-yet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 Pull the repo (HTTPS - no SSH key needed yet)
+        4.2 Pull the repo and pick the profile (HTTPS - no SSH key needed yet)
       
     </span>
   </a>
@@ -534,10 +562,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#44-create-the-ssh-key-for-this-machine" class="md-nav__link">
+  <a href="#44-ssh-key-for-this-machine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4 Create the SSH key for this machine
+        4.4 SSH key for this machine
       
     </span>
   </a>
@@ -561,33 +589,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-daily-use" class="md-nav__link">
+  <a href="#5-how-the-profile-choice-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Daily use
+        5. How the profile choice works
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-choosing-what-syncs-where" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Choosing what syncs where
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Choosing what syncs where">
+    <nav class="md-nav" aria-label="5. How the profile choice works">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-ask-machine-type-once-chezmoitomltmpl" class="md-nav__link">
+  <a href="#51-ask-once-chezmoitomltmpl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1 Ask machine type once - .chezmoi.toml.tmpl
+        5.1 Ask once - .chezmoi.toml.tmpl
       
     </span>
   </a>
@@ -595,10 +612,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-skip-whole-files-per-machine-chezmoiignore" class="md-nav__link">
+  <a href="#52-dotfile-groups-chezmoidatadotfilesyaml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2 Skip whole files per machine - .chezmoiignore
+        5.2 Dotfile groups - .chezmoidata/dotfiles.yaml
       
     </span>
   </a>
@@ -606,10 +623,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#63-different-content-inside-one-file-templates" class="md-nav__link">
+  <a href="#53-skipping-chezmoiignore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3 Different content inside one file - templates
+        5.3 Skipping - .chezmoiignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-sections-inside-one-file-agentsmdtmpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Sections inside one file - AGENTS.md.tmpl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-test-another-profile-without-changing-this-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Test another profile without changing this machine
       
     </span>
   </a>
@@ -622,22 +661,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-programs-list" class="md-nav__link">
+  <a href="#6-programs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Programs list
+        6. Programs
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7. Programs list">
+    <nav class="md-nav" aria-label="6. Programs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#71-chezmoidatapackagesyaml" class="md-nav__link">
+  <a href="#61-entry-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.1 .chezmoidata/packages.yaml
+        6.1 Entry format
       
     </span>
   </a>
@@ -645,10 +684,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#72-run_onchange_install-packagesps1tmpl" class="md-nav__link">
+  <a href="#62-what-happens-on-apply" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2 run_onchange_install-packages.ps1.tmpl
+        6.2 What happens on apply
       
     </span>
   </a>
@@ -656,10 +695,71 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#73-add-a-program" class="md-nav__link">
+  <a href="#63-add-or-remove-a-program" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.3 Add a program
+        6.3 Add or remove a program
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-special-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Special cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Special cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-powershell-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 PowerShell profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-lintalist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Lintalist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-windows-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Windows Terminal
       
     </span>
   </a>
@@ -683,10 +783,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-never-sync" class="md-nav__link">
+  <a href="#9-daily-use" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. Never sync
+        9. Daily use
       
     </span>
   </a>
@@ -694,10 +794,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-cheat-sheet" class="md-nav__link">
+  <a href="#10-never-sync" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10. Cheat sheet
+        10. Never sync
       
     </span>
   </a>
@@ -705,10 +805,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-troubleshooting" class="md-nav__link">
+  <a href="#11-cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Troubleshooting
+        11. Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Troubleshooting
       
     </span>
   </a>
@@ -869,21 +980,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-machine-types" class="md-nav__link">
+  <a href="#2-profiles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Machine types
+        2. Profiles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-dotfiles-per-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Dotfiles per profile
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-repo-layout" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22-programs-per-profile" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Repo layout
+        2.2 Programs per profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-is-in-the-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. What is in the repo
       
     </span>
   </a>
@@ -903,10 +1042,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-get-chezmoi" class="md-nav__link">
+  <a href="#41-get-git-chezmoi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 Get chezmoi
+        4.1 Get git + chezmoi
       
     </span>
   </a>
@@ -914,10 +1053,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-pull-the-repo-https-no-ssh-key-needed-yet" class="md-nav__link">
+  <a href="#42-pull-the-repo-and-pick-the-profile-https-no-ssh-key-needed-yet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 Pull the repo (HTTPS - no SSH key needed yet)
+        4.2 Pull the repo and pick the profile (HTTPS - no SSH key needed yet)
       
     </span>
   </a>
@@ -936,10 +1075,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#44-create-the-ssh-key-for-this-machine" class="md-nav__link">
+  <a href="#44-ssh-key-for-this-machine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4 Create the SSH key for this machine
+        4.4 SSH key for this machine
       
     </span>
   </a>
@@ -963,33 +1102,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-daily-use" class="md-nav__link">
+  <a href="#5-how-the-profile-choice-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Daily use
+        5. How the profile choice works
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-choosing-what-syncs-where" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Choosing what syncs where
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Choosing what syncs where">
+    <nav class="md-nav" aria-label="5. How the profile choice works">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-ask-machine-type-once-chezmoitomltmpl" class="md-nav__link">
+  <a href="#51-ask-once-chezmoitomltmpl" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1 Ask machine type once - .chezmoi.toml.tmpl
+        5.1 Ask once - .chezmoi.toml.tmpl
       
     </span>
   </a>
@@ -997,10 +1125,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-skip-whole-files-per-machine-chezmoiignore" class="md-nav__link">
+  <a href="#52-dotfile-groups-chezmoidatadotfilesyaml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2 Skip whole files per machine - .chezmoiignore
+        5.2 Dotfile groups - .chezmoidata/dotfiles.yaml
       
     </span>
   </a>
@@ -1008,10 +1136,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#63-different-content-inside-one-file-templates" class="md-nav__link">
+  <a href="#53-skipping-chezmoiignore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.3 Different content inside one file - templates
+        5.3 Skipping - .chezmoiignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-sections-inside-one-file-agentsmdtmpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Sections inside one file - AGENTS.md.tmpl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-test-another-profile-without-changing-this-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Test another profile without changing this machine
       
     </span>
   </a>
@@ -1024,22 +1174,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-programs-list" class="md-nav__link">
+  <a href="#6-programs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Programs list
+        6. Programs
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7. Programs list">
+    <nav class="md-nav" aria-label="6. Programs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#71-chezmoidatapackagesyaml" class="md-nav__link">
+  <a href="#61-entry-format" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.1 .chezmoidata/packages.yaml
+        6.1 Entry format
       
     </span>
   </a>
@@ -1047,10 +1197,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#72-run_onchange_install-packagesps1tmpl" class="md-nav__link">
+  <a href="#62-what-happens-on-apply" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2 run_onchange_install-packages.ps1.tmpl
+        6.2 What happens on apply
       
     </span>
   </a>
@@ -1058,10 +1208,71 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#73-add-a-program" class="md-nav__link">
+  <a href="#63-add-or-remove-a-program" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.3 Add a program
+        6.3 Add or remove a program
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-special-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Special cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Special cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-powershell-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 PowerShell profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-lintalist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Lintalist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 VS Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-windows-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Windows Terminal
       
     </span>
   </a>
@@ -1085,10 +1296,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-never-sync" class="md-nav__link">
+  <a href="#9-daily-use" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9. Never sync
+        9. Daily use
       
     </span>
   </a>
@@ -1096,10 +1307,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-cheat-sheet" class="md-nav__link">
+  <a href="#10-never-sync" class="md-nav__link">
     <span class="md-ellipsis">
       
-        10. Cheat sheet
+        10. Never sync
       
     </span>
   </a>
@@ -1107,10 +1318,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-troubleshooting" class="md-nav__link">
+  <a href="#11-cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        11. Troubleshooting
+        11. Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Troubleshooting
       
     </span>
   </a>
@@ -1135,22 +1357,9 @@
 
 
 <h1 id="dotfiles-with-chezmoi">Dotfiles with chezmoi</h1>
-<p>One private repo keeps my agent rules, skills, tool settings and program list.
-On a new machine, one command brings everything back - only the parts meant
-for that machine type.</p>
-<ul>
-<li><a href="#1-concepts">1. Concepts</a></li>
-<li><a href="#2-machine-types">2. Machine types</a></li>
-<li><a href="#3-repo-layout">3. Repo layout</a></li>
-<li><a href="#4-new-machine-step-by-step">4. New machine - step by step</a></li>
-<li><a href="#5-daily-use">5. Daily use</a></li>
-<li><a href="#6-choosing-what-syncs-where">6. Choosing what syncs where</a></li>
-<li><a href="#7-programs-list">7. Programs list</a></li>
-<li><a href="#8-ssh">8. SSH</a></li>
-<li><a href="#9-never-sync">9. Never sync</a></li>
-<li><a href="#10-cheat-sheet">10. Cheat sheet</a></li>
-<li><a href="#11-troubleshooting">11. Troubleshooting</a></li>
-</ul>
+<p>One private repo, <a href="https://github.com/Buerostuff/dotfiles"><code>Buerostuff/dotfiles</code></a>,
+keeps my agent rules, skills, tool settings and program list. On a new machine
+one command brings everything back - only the parts meant for that <strong>profile</strong>.</p>
 <hr />
 <h2 id="1-concepts">1. Concepts</h2>
 <table>
@@ -1167,88 +1376,298 @@ for that machine type.</p>
 </tr>
 <tr>
 <td><strong>Source dir</strong></td>
-<td>The local clone of the repo: <code>~/.local/share/chezmoi</code>. I edit here.</td>
+<td>The repo on disk. VDI: <code>C:\Install\_github\dotfiles</code>. Elsewhere default: <code>~/.local/share/chezmoi</code>. I edit here.</td>
 </tr>
 <tr>
 <td><strong>Target</strong></td>
-<td>The real files in my home folder (e.g. <code>~/.config/opencode/AGENTS.md</code>).</td>
+<td>The real file in my home folder (e.g. <code>~/.config/opencode/AGENTS.md</code>).</td>
 </tr>
 <tr>
 <td><strong>Template</strong> (<code>.tmpl</code>)</td>
-<td>File with <code>{{ if ... }}</code> blocks - content changes per machine.</td>
+<td>File with <code>{{ if ... }}</code> blocks - content changes per profile / OS.</td>
 </tr>
 <tr>
 <td><strong>Script</strong> (<code>run_...</code>)</td>
-<td>PowerShell script chezmoi runs on <code>apply</code> (e.g. install programs).</td>
+<td>Script chezmoi runs on <code>apply</code> (install programs, copy settings).</td>
 </tr>
 <tr>
-<td><strong>Machine type</strong></td>
-<td><code>personal</code>, <code>vdi</code> or <code>work-laptop</code>. Asked once per machine.</td>
+<td><strong>Profile</strong></td>
+<td>Who uses the machine and what it may get. Asked once per machine.</td>
+</tr>
+<tr>
+<td><strong>OS</strong></td>
+<td>Detected automatically (<code>windows</code>, <code>darwin</code>, <code>linux</code>). Not a profile.</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code> GitHub repo  ──chezmoi init/update──▶  source dir  ──chezmoi apply──▶  home folder
- (private)    ◀──────git push───────    (~/.local/share/chezmoi)  ◀──chezmoi re-add──
+<div class="highlight"><pre><span></span><code> GitHub repo  ── git pull / chezmoi update ──▶  source dir  ── chezmoi apply ──▶  home folder
+ (private)    ◀──────── git push ───────────   (the repo)   ◀── chezmoi re-add ──
 </code></pre></div>
 <p>Only files I explicitly <code>chezmoi add</code> are managed. Everything else is untouched.</p>
 <hr />
-<h2 id="2-machine-types">2. Machine types</h2>
+<h2 id="2-profiles">2. Profiles</h2>
+<p>Profile = <strong>trust level / purpose</strong>. OS is separate and automatic, so there is no
+"windows-personal" vs "mac-personal" - just <code>rg-personal</code> on any OS.</p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Admin?</th>
-<th>Programs installed via</th>
-<th>Notes</th>
+<th>Profile</th>
+<th>Machine</th>
+<th>Idea</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>personal</code></td>
-<td>yes</td>
-<td><code>winget</code></td>
-<td>Full set.</td>
+<td><code>rg-personal</code></td>
+<td>my own laptops / PCs</td>
+<td>everything</td>
 </tr>
 <tr>
-<td><code>work-laptop</code></td>
-<td>maybe</td>
-<td><code>winget</code> (user scope)</td>
-<td>No private stuff.</td>
+<td><code>rg-semi</code></td>
+<td>own use, not fully mine</td>
+<td>like personal, but no git identity, no SSH</td>
 </tr>
 <tr>
-<td><code>vdi</code></td>
-<td><strong>no</strong></td>
-<td>portable zips → <code>C:\Install\Programs</code></td>
-<td>Port 22 blocked → SSH via port 443. Check company policy before pushing from here.</td>
+<td><code>rg-vdi</code></td>
+<td>company dev VDI (no admin)</td>
+<td>full work dev setup</td>
+</tr>
+<tr>
+<td><code>rg-work</code></td>
+<td>company laptop</td>
+<td>only Lintalist</td>
+</tr>
+<tr>
+<td><code>rg-collab</code></td>
+<td>shared with a colleague</td>
+<td>dev tools + shell look, none of my rules</td>
+</tr>
+<tr>
+<td><code>rg-public</code></td>
+<td>shared / untrusted</td>
+<td>shell look + core tools only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-dotfiles-per-profile">2.1 Dotfiles per profile</h3>
+<p>Source of truth: <code>.chezmoidata/dotfiles.yaml</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Dotfile</th>
+<th style="text-align: center;">personal</th>
+<th style="text-align: center;">semi</th>
+<th style="text-align: center;">vdi</th>
+<th style="text-align: center;">work</th>
+<th style="text-align: center;">collab</th>
+<th style="text-align: center;">public</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent rules <code>AGENTS.md</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓ (+VDI, IT tickets)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Skills (<code>.agents</code>, <code>.claude</code>, opencode)</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><code>opencode.jsonc</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><code>.gitconfig</code> (name + email)</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td><code>starship.toml</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>PowerShell profile</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>VS Code keybindings + snippets</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Lintalist settings + snippets</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>SSH config (<code>github_vdi</code>, devops)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Windows Terminal <code>settings.json</code></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>Not synced on purpose: VS Code <code>settings.json</code> (holds DB connection passwords),
+SSH keys.</p>
+<h3 id="22-programs-per-profile">2.2 Programs per profile</h3>
+<p>Source of truth: <code>.chezmoidata/packages.yaml</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th style="text-align: center;">personal</th>
+<th style="text-align: center;">semi</th>
+<th style="text-align: center;">vdi</th>
+<th style="text-align: center;">work</th>
+<th style="text-align: center;">collab</th>
+<th style="text-align: center;">public</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Git, PowerShell 7, Starship, ripgrep, VS Code</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>chezmoi</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>Cursor, Zed</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Node, Bun, Python 3.13, uv, Go, .NET 10, Docker</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>HeidiSQL, Azure Storage Explorer, WinSCP</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Obsidian, PDF-XChange</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Lintalist</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="3-repo-layout">3. Repo layout</h2>
+<h2 id="3-what-is-in-the-repo">3. What is in the repo</h2>
 <div class="highlight"><pre><span></span><code>dotfiles/
-├── .chezmoi.toml.tmpl                 # asks machine type once
-├── .chezmoiignore                     # what NOT to place (per machine)
+├── .chezmoi.toml.tmpl                    # asks profile, sets sourceDir, runs .ps1 with pwsh
+├── .chezmoiignore                        # never-sync list + per-profile / per-OS skips
 ├── .chezmoidata/
-│   └── packages.yaml                  # program list with machine tags
-├── run_onchange_install-packages.ps1.tmpl   # installs programs from the list
+│   ├── dotfiles.yaml                     # dotfile groups → profiles
+│   └── packages.yaml                     # programs → profiles (winget / brew / VDI dir)
+├── .chezmoiscripts/
+│   ├── run_onchange_install-packages.ps1.tmpl       # Windows: winget, or VDI check
+│   ├── run_onchange_install-packages.sh.tmpl        # macOS / Linux: brew
+│   ├── run_onchange_after_pwsh-profile.ps1.tmpl     # puts pwsh profile in place
+│   └── run_onchange_after_lintalist-settings.ps1.tmpl  # copies Lintalist settings
+├── README.md                             # not placed in home
+├── AppData/Roaming/Code/User/            # VS Code keybindings + snippets
 ├── dot_config/
-│   └── opencode/
-│       ├── AGENTS.md.tmpl             # global agent rules (templated)
-│       ├── opencode.jsonc.tmpl
-│       └── skill/...
-├── dot_agents/skills/...              # shared skills
-├── dot_claude/skills/...
-├── dot_ssh/
-│   └── config.tmpl                    # ssh config ONLY, never keys
-├── Documents/PowerShell/Microsoft.PowerShell_profile.ps1.tmpl
-└── docs/                              # this page (GitHub Pages)
+│   ├── opencode/  AGENTS.md.tmpl, opencode.jsonc.tmpl, skill/
+│   ├── powershell/Microsoft.PowerShell_profile.ps1.tmpl
+│   ├── lintalist/ Settings.ini, *.ini, bundles/, local/
+│   └── starship.toml
+├── dot_agents/skills/...
+├── dot_claude/skills/react-doctor/
+├── dot_gitconfig
+└── dot_ssh/config                        # VDI only, never keys
 </code></pre></div>
-<p>Naming rules chezmoi uses:</p>
 <table>
 <thead>
 <tr>
 <th>Repo name</th>
-<th>Becomes</th>
+<th>Becomes in home</th>
 </tr>
 </thead>
 <tbody>
@@ -1257,57 +1676,259 @@ for that machine type.</p>
 <td><code>.config</code></td>
 </tr>
 <tr>
-<td><code>file.tmpl</code></td>
-<td><code>file</code> (rendered as template)</td>
+<td><code>x.tmpl</code></td>
+<td><code>x</code> (rendered per profile / OS)</td>
 </tr>
 <tr>
-<td><code>private_x</code></td>
-<td><code>x</code> with restricted permissions</td>
+<td><code>.chezmoiscripts/run_onchange_x.ps1.tmpl</code></td>
+<td>script, runs when its content changes</td>
 </tr>
 <tr>
-<td><code>run_once_x.ps1</code></td>
-<td>runs once per machine</td>
+<td><code>run_onchange_after_...</code></td>
+<td>same, runs after files are placed</td>
 </tr>
 <tr>
-<td><code>run_onchange_x.ps1</code></td>
-<td>runs when its content changes</td>
+<td><code>.chezmoidata/*.yaml</code></td>
+<td>data for templates (<code>.packages</code>, <code>.dotfiles</code>)</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="4-new-machine-step-by-step">4. New machine - step by step</h2>
-<h3 id="41-get-chezmoi">4.1 Get chezmoi</h3>
-<p><strong>Personal / work laptop (admin or winget allowed):</strong></p>
+<h3 id="41-get-git-chezmoi">4.1 Get git + chezmoi</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="windows-winget" name="__tabbed_1" type="radio" /><input id="vdi-no-admin" name="__tabbed_1" type="radio" /><input id="macos--linux" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="windows-winget">Windows (winget)</label><label for="vdi-no-admin">VDI (no admin)</label><label for="macos--linux">macOS / Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="n">winget</span> <span class="n">install</span> <span class="n">Git</span><span class="p">.</span><span class="n">Git</span> <span class="n">twpayne</span><span class="p">.</span><span class="n">chezmoi</span>
 </code></pre></div>
-<p><strong>VDI (no admin):</strong> download the Windows zip from
+</div>
+<div class="tabbed-block">
+<p>Download the Windows zip from
 <a href="https://github.com/twpayne/chezmoi/releases">https://github.com/twpayne/chezmoi/releases</a>, unpack to
-<code>C:\Install\Programs\chezmoi</code>, then add it to the user PATH:</p>
+<code>C:\Install\Programs\chezmoi</code>, then add to the user PATH:</p>
 <div class="highlight"><pre><span></span><code><span class="no">[Environment]</span><span class="p">::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;Path&#39;</span><span class="p">,</span>
   <span class="no">[Environment]</span><span class="p">::</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;Path&#39;</span><span class="p">,</span><span class="s1">&#39;User&#39;</span><span class="p">)</span> <span class="p">+</span> <span class="s1">&#39;;C:\Install\Programs\chezmoi&#39;</span><span class="p">,</span>
   <span class="s1">&#39;User&#39;</span><span class="p">)</span>
 </code></pre></div>
-<p>Open a new terminal, check: <code>chezmoi --version</code>.</p>
-<h3 id="42-pull-the-repo-https-no-ssh-key-needed-yet">4.2 Pull the repo (HTTPS - no SSH key needed yet)</h3>
-<div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="n">init</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/&lt;</span><span class="n">user</span><span class="p">&gt;/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>
+<p>New terminal → <code>chezmoi --version</code>.</p>
+</div>
+<div class="tabbed-block">
+<p>Install Homebrew (<a href="https://brew.sh">https://brew.sh</a>), then:</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>chezmoi
 </code></pre></div>
-<p>A browser login opens (Git Credential Manager). chezmoi then asks:</p>
-<div class="highlight"><pre><span></span><code>Machine type: personal / vdi / work-laptop
+</div>
+</div>
+</div>
+<h3 id="42-pull-the-repo-and-pick-the-profile-https-no-ssh-key-needed-yet">4.2 Pull the repo and pick the profile (HTTPS - no SSH key needed yet)</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="windows--macos--linux" name="__tabbed_2" type="radio" /><input id="vdi-repo-in-cinstall_github" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="windows--macos--linux">Windows / macOS / Linux</label><label for="vdi-repo-in-cinstall_github">VDI (repo in C:\Install_github)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="n">init</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">Buerostuff</span><span class="p">/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">Buerostuff</span><span class="p">/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span> <span class="n">C</span><span class="p">:\</span><span class="n">Install</span><span class="p">\</span><span class="n">_github</span><span class="p">\</span><span class="n">dotfiles</span>
+<span class="n">chezmoi</span> <span class="n">init</span> <span class="p">-</span><span class="n">-source</span> <span class="n">C</span><span class="p">:\</span><span class="n">Install</span><span class="p">\</span><span class="n">_github</span><span class="p">\</span><span class="n">dotfiles</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>A browser login opens (Git Credential Manager). chezmoi asks:</p>
+<div class="highlight"><pre><span></span><code>Profile: rg-personal / rg-semi / rg-vdi / rg-work / rg-collab / rg-public
+</code></pre></div>
+<p>Non-interactive shell: add <code>--promptChoice "Profile=rg-vdi"</code>.</p>
 <h3 id="43-preview-then-apply">4.3 Preview, then apply</h3>
 <div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="nb">diff </span>     <span class="c"># what would change</span>
-<span class="n">chezmoi</span> <span class="n">apply</span> <span class="n">-v</span>  <span class="c"># place files + run install script</span>
+<span class="n">chezmoi</span> <span class="n">apply</span> <span class="n">-v</span>  <span class="c"># place files + run scripts (install programs, profile, Lintalist)</span>
 </code></pre></div>
-<h3 id="44-create-the-ssh-key-for-this-machine">4.4 Create the SSH key for this machine</h3>
+<h3 id="44-ssh-key-for-this-machine">4.4 SSH key for this machine</h3>
 <p>See <a href="#8-ssh">8. SSH</a>.</p>
 <h3 id="45-switch-the-repo-to-ssh-optional">4.5 Switch the repo to SSH (optional)</h3>
 <div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="nb">cd</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="nb">set-url</span> <span class="n">origin</span> <span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span><span class="p">:&lt;</span><span class="n">user</span><span class="p">&gt;/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>   <span class="c"># or github_vdi:&lt;user&gt;/dotfiles.git on VDI</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="nb">set-url</span> <span class="n">origin</span> <span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">Buerostuff</span><span class="p">/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>   <span class="c"># VDI: github_vdi:Buerostuff/dotfiles.git</span>
 <span class="n">exit</span>
 </code></pre></div>
-<p>Done.</p>
 <hr />
-<h2 id="5-daily-use">5. Daily use</h2>
+<h2 id="5-how-the-profile-choice-works">5. How the profile choice works</h2>
+<h3 id="51-ask-once-chezmoitomltmpl">5.1 Ask once - <code>.chezmoi.toml.tmpl</code></h3>
+<div class="highlight"><pre><span></span><code><span class="err">{{</span><span class="n">-</span><span class="w"> </span><span class="err">$</span><span class="n">profile</span><span class="w"> </span><span class="err">:</span><span class="o">=</span><span class="w"> </span><span class="err">promptChoiceOnce . </span><span class="s2">&quot;profile&quot;</span><span class="w"> </span><span class="s2">&quot;Profile&quot;</span><span class="w"> </span><span class="err">(</span><span class="n">list</span><span class="w"> </span><span class="s2">&quot;rg-personal&quot;</span><span class="w"> </span><span class="s2">&quot;rg-semi&quot;</span><span class="w"> </span><span class="s2">&quot;rg-vdi&quot;</span><span class="w"> </span><span class="s2">&quot;rg-work&quot;</span><span class="w"> </span><span class="s2">&quot;rg-collab&quot;</span><span class="w"> </span><span class="s2">&quot;rg-public&quot;</span><span class="err">)</span><span class="w"> </span><span class="n">-</span><span class="err">}}</span>
+<span class="n">sourceDir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="p">.</span><span class="n">chezmoi</span><span class="p">.</span><span class="n">sourceDir</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="p">}</span><span class="err">}</span>
+
+<span class="k">[data]</span>
+<span class="w">  </span><span class="n">profile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">$</span><span class="n">profile</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="p">}</span><span class="err">}</span>
+
+<span class="k">[interpreters.ps1]</span>
+<span class="w">  </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;pwsh&quot;</span>
+<span class="w">  </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;-NoLogo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-NoProfile&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-ExecutionPolicy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bypass&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p>Show it: <code>chezmoi data</code>. Change it: <code>chezmoi init --prompt</code>, or edit
+<code>~/.config/chezmoi/chezmoi.toml</code>.</p>
+<h3 id="52-dotfile-groups-chezmoidatadotfilesyaml">5.2 Dotfile groups - <code>.chezmoidata/dotfiles.yaml</code></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">dotfiles</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">agents</span><span class="p">:</span><span class="w">     </span><span class="p p-Indicator">[</span><span class="nv">rg-personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-semi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-vdi</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">gitconfig</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">[</span><span class="nv">rg-personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-vdi</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">lintalist</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">[</span><span class="nv">rg-personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-semi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-vdi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-work</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">ssh</span><span class="p">:</span><span class="w">        </span><span class="p p-Indicator">[</span><span class="nv">rg-vdi</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="c1"># ...</span>
+</code></pre></div>
+<p>To give a profile a dotfile: add the profile to that group. Done.</p>
+<h3 id="53-skipping-chezmoiignore">5.3 Skipping - <code>.chezmoiignore</code></h3>
+<p>Each group skips its files when the profile is not listed:</p>
+<div class="highlight"><pre><span></span><code>{{ if not (has .profile .dotfiles.gitconfig) }}
+.gitconfig
+{{ end }}
+</code></pre></div>
+<p>Plus per-OS skips (<code>AppData/**</code>, Lintalist only on Windows) and the never-sync
+list. Paths are <strong>home</strong> paths (<code>.config/...</code>), not repo paths.</p>
+<h3 id="54-sections-inside-one-file-agentsmdtmpl">5.4 Sections inside one file - <code>AGENTS.md.tmpl</code></h3>
+<div class="highlight"><pre><span></span><code>{{ if eq .profile &quot;rg-vdi&quot; -}}
+## Corporate DevVDI (no admin rights)
+...
+{{ end -}}
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th style="text-align: center;">personal / semi</th>
+<th style="text-align: center;">vdi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Communication, Todo list, Git, Installing software, Env files</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td>Cloning via <code>github_vdi</code>, .NET on the DevVDI, Corporate DevVDI, IT tickets</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-test-another-profile-without-changing-this-machine">5.5 Test another profile without changing this machine</h3>
+<div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="n">managed</span> <span class="p">-</span><span class="n">-include</span> <span class="n">files</span> <span class="p">-</span><span class="n">-override-data</span> <span class="s1">&#39;{&quot;profile&quot;:&quot;rg-work&quot;}&#39;</span>
+
+<span class="s1">&#39;{&quot;profile&quot;:&quot;rg-personal&quot;}&#39;</span> <span class="p">|</span> <span class="nb">Set-Content</span> <span class="nv">$env:TEMP</span><span class="p">\</span><span class="n">p</span><span class="p">.</span><span class="n">json</span>
+<span class="n">chezmoi</span> <span class="n">execute-template</span> <span class="p">-</span><span class="n">-override-data</span><span class="o">-file</span> <span class="nv">$env:TEMP</span><span class="p">\</span><span class="n">p</span><span class="p">.</span><span class="n">json</span> <span class="p">`</span>
+  <span class="p">-</span><span class="o">-file</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="n">chezmoi</span> <span class="n">source-path</span><span class="p">)</span><span class="s2">\dot_config\opencode\AGENTS.md.tmpl&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="6-programs">6. Programs</h2>
+<p>Program <strong>files</strong> are not synced. Only the <strong>list</strong> is.</p>
+<h3 id="61-entry-format">6.1 Entry format</h3>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VS Code</span>
+<span class="w">  </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft.VisualStudioCode</span><span class="w">   </span><span class="c1"># Windows (not VDI)</span>
+<span class="w">  </span><span class="nt">brew</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">visual-studio-code</span><span class="w">             </span><span class="c1"># macOS / Linux</span>
+<span class="w">  </span><span class="nt">cask</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">                           </span><span class="c1"># GUI app → brew --cask (macOS only)</span>
+<span class="w">  </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft VS Code</span><span class="w">               </span><span class="c1"># VDI: C:\Install\Programs\&lt;dir&gt;</span>
+<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://code.visualstudio.com/#alt-downloads</span><span class="w">   </span><span class="c1"># by-hand download</span>
+<span class="w">  </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">rg-personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-semi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-vdi</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-collab</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">rg-public</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<h3 id="62-what-happens-on-apply">6.2 What happens on <code>apply</code></h3>
+<p>Scripts re-run <strong>only when <code>packages.yaml</code> changes</strong> (they embed its hash).</p>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows (not VDI)</td>
+<td>not found by <code>winget list</code> → <code>winget install --scope user</code>, fallback machine scope. No winget id (Lintalist) → listed "install by hand" if <code>C:\Install\Programs\&lt;dir&gt;</code> is missing.</td>
+</tr>
+<tr>
+<td>VDI (<code>rg-vdi</code>)</td>
+<td>never downloads. Lists missing <code>C:\Install\Programs\&lt;dir&gt;</code> with URL.</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td><code>brew install</code> / <code>brew install --cask</code>. No brew id → skipped.</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td><code>brew install</code> for CLI formulas; casks listed "install by hand".</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-add-or-remove-a-program">6.3 Add or remove a program</h3>
+<ol>
+<li><code>winget search &lt;name&gt;</code> / <code>brew search &lt;name&gt;</code> for the ids.</li>
+<li>Edit <code>packages.yaml</code> (<code>on:</code> decides who gets it).</li>
+<li><code>chezmoi apply -v</code>.</li>
+<li>Commit + push.</li>
+</ol>
+<hr />
+<h2 id="7-special-cases">7. Special cases</h2>
+<h3 id="71-powershell-profile">7.1 PowerShell profile</h3>
+<p>Source: <code>dot_config/powershell/Microsoft.PowerShell_profile.ps1.tmpl</code> →
+<code>~/.config/powershell/</code> (the native path on macOS / Linux).</p>
+<p>On Windows a script copies it to the real profile:</p>
+<table>
+<thead>
+<tr>
+<th>Profile</th>
+<th>Copied to</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rg-vdi</code></td>
+<td><code>$PSHOME</code> → <code>C:\Install\Programs\PowerShell\7\Microsoft.PowerShell_profile.ps1</code></td>
+<td>Group policy blocks scripts in <code>Documents</code> ("blocked by software restriction policies").</td>
+</tr>
+<tr>
+<td>others</td>
+<td><code>$PROFILE</code> (<code>Documents\PowerShell\...</code>)</td>
+<td>normal place</td>
+</tr>
+</tbody>
+</table>
+<p>Content: Starship prompt; on VDI the .NET 10 PATH fix
+(<code>C:\Install\Programs\dotnet</code> before the system SDK 8); <code>Save-Lintalist</code> helper.</p>
+<h3 id="72-lintalist">7.2 Lintalist</h3>
+<p>Lintalist lives in <code>C:\Install\Programs\lintalist64</code> - outside home, so chezmoi
+keeps a copy in <code>~/.config/lintalist</code> (<code>Settings.ini</code>, <code>AltPaste.ini</code>,
+<code>LineFeed.ini</code>, <code>multicaret.ini</code>, <code>Sound.ini</code>, <code>bundles/default.txt</code>,
+<code>local/local.txt</code>).</p>
+<ul>
+<li><strong>Repo → Lintalist:</strong> <code>chezmoi apply</code> copies them into the install folder
+  (only when they changed). Restart Lintalist.</li>
+<li>
+<p><strong>Lintalist → repo</strong> (after editing snippets in Lintalist):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Save-Lintalist</span>          <span class="c"># copies back + chezmoi re-add</span>
+<span class="n">chezmoi</span> <span class="nb">cd </span>             <span class="c"># git add / commit / push, exit</span>
+</code></pre></div>
+</li>
+</ul>
+<h3 id="73-vs-code">7.3 VS Code</h3>
+<p>Synced: <code>keybindings.json</code>, <code>snippets/</code>. <strong>Not</strong> <code>settings.json</code> - it holds DB
+connections with passwords (chezmoi warned on <code>add</code>). Never add it.</p>
+<h3 id="74-windows-terminal">7.4 Windows Terminal</h3>
+<p><code>AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json</code>
+for <code>rg-personal</code> and <code>rg-vdi</code>. It contains VDI paths (<code>C:\Install\Programs\PowerShell\7\pwsh.exe</code>,
+start folder <code>C:\Install\_github</code>) - on a personal machine use the same folders
+or change them there in the repo file.</p>
+<hr />
+<h2 id="8-ssh">8. SSH</h2>
+<p><strong>Keys are never in the repo.</strong> Each machine gets its own key, so a lost
+laptop = delete one key on GitHub. Full key setup: <a href="../git-ssh-setup/">Git SSH Setup</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ssh-keygen</span> <span class="n">-t</span> <span class="n">ed25519</span> <span class="n">-C</span> <span class="s2">&quot;&lt;machine-name&gt;&quot;</span>
+<span class="nb">Get-Content</span> <span class="nv">$HOME</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">id_ed25519</span><span class="p">.</span><span class="n">pub</span> <span class="p">|</span> <span class="nb">Set-Clipboard</span>
+</code></pre></div>
+<p>Paste into GitHub → <em>Settings → SSH and GPG keys → New SSH key</em>.</p>
+<p><code>~/.ssh/config</code> is synced <strong>only to <code>rg-vdi</code></strong> (<code>github_vdi</code> port-443 alias,
+VDI key names). Other machines write their own.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="n">-T</span> <span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span>      <span class="c"># elsewhere</span>
+<span class="n">ssh</span> <span class="n">-T</span> <span class="n">github_vdi</span>          <span class="c"># VDI (port 22 blocked)</span>
+</code></pre></div>
+<p>Clone on VDI: <code>git clone github_vdi:&lt;owner&gt;/&lt;repo&gt;.git</code>.</p>
+<hr />
+<h2 id="9-daily-use">9. Daily use</h2>
 <table>
 <thead>
 <tr>
@@ -1318,18 +1939,14 @@ for that machine type.</p>
 <tbody>
 <tr>
 <td>Start syncing a new file</td>
-<td><code>chezmoi add &lt;path&gt;</code></td>
-</tr>
-<tr>
-<td>Add as template (per-machine content)</td>
-<td><code>chezmoi add --template &lt;path&gt;</code></td>
+<td><code>chezmoi add &lt;path&gt;</code> (then add it to a group in <code>dotfiles.yaml</code> + <code>.chezmoiignore</code>)</td>
 </tr>
 <tr>
 <td>Edit a managed file</td>
 <td><code>chezmoi edit &lt;path&gt;</code> then <code>chezmoi apply</code></td>
 </tr>
 <tr>
-<td>I edited the real file directly</td>
+<td>I edited a plain (non-template) file directly</td>
 <td><code>chezmoi re-add</code></td>
 </tr>
 <tr>
@@ -1353,157 +1970,36 @@ for that machine type.</p>
 <td><code>chezmoi managed</code></td>
 </tr>
 <tr>
-<td>Show machine data</td>
+<td>Show profile / OS</td>
 <td><code>chezmoi data</code></td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> <code>AGENTS.md</code>, <code>opencode.jsonc</code> and the PowerShell profile are
+templates. Edit the <code>.tmpl</code> in the repo (or <code>chezmoi edit</code>), then
+<code>chezmoi apply</code>. Direct edits to the target are overwritten on the next apply.</p>
+</blockquote>
 <hr />
-<h2 id="6-choosing-what-syncs-where">6. Choosing what syncs where</h2>
-<h3 id="61-ask-machine-type-once-chezmoitomltmpl">6.1 Ask machine type once - <code>.chezmoi.toml.tmpl</code></h3>
-<div class="highlight"><pre><span></span><code><span class="err">{{</span><span class="n">-</span><span class="w"> </span><span class="err">$</span><span class="n">machine</span><span class="w"> </span><span class="err">:</span><span class="o">=</span><span class="w"> </span><span class="err">promptChoiceOnce . </span><span class="s2">&quot;machine&quot;</span><span class="w"> </span><span class="s2">&quot;Machine type&quot;</span><span class="w"> </span><span class="err">(</span><span class="n">list</span><span class="w"> </span><span class="s2">&quot;personal&quot;</span><span class="w"> </span><span class="s2">&quot;vdi&quot;</span><span class="w"> </span><span class="s2">&quot;work-laptop&quot;</span><span class="err">)</span><span class="w"> </span><span class="n">-</span><span class="err">}}</span>
-<span class="k">[data]</span>
-<span class="w">  </span><span class="n">machine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">$</span><span class="n">machine</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="p">}</span><span class="err">}</span>
-</code></pre></div>
-<p>Change it later: <code>chezmoi init --prompt</code>, or edit <code>~/.config/chezmoi/chezmoi.toml</code>.</p>
-<h3 id="62-skip-whole-files-per-machine-chezmoiignore">6.2 Skip whole files per machine - <code>.chezmoiignore</code></h3>
-<div class="highlight"><pre><span></span><code>README.md
-docs/**
-
-{{ if ne .machine &quot;vdi&quot; }}
-.config/opencode/skill/windows-eperm-node-modules/**
-{{ end }}
-
-{{ if eq .machine &quot;work-laptop&quot; }}
-Documents/private-notes/**
-{{ end }}
-</code></pre></div>
-<p>(Paths here are <strong>target</strong> paths, i.e. <code>.config/...</code>, not <code>dot_config/...</code>.)</p>
-<h3 id="63-different-content-inside-one-file-templates">6.3 Different content inside one file - templates</h3>
-<p><code>AGENTS.md.tmpl</code>:</p>
-<div class="highlight"><pre><span></span><code># Global rules
-... shared rules ...
-
-{{ if eq .machine &quot;vdi&quot; }}
-## Corporate DevVDI (no admin rights)
-... VDI-only rules ...
-{{ end }}
-</code></pre></div>
-<p>Paths that differ per machine:</p>
-<div class="highlight"><pre><span></span><code>{{ .chezmoi.homeDir }}/.mcp/ag-mcp/...
-</code></pre></div>
-<p>Test a template without applying:</p>
-<div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="n">execute-template</span> <span class="p">&lt;</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="n">chezmoi</span> <span class="n">source-path</span><span class="p">)</span><span class="s2">\dot_config\opencode\AGENTS.md.tmpl&quot;</span>
-</code></pre></div>
-<hr />
-<h2 id="7-programs-list">7. Programs list</h2>
-<p>Program <strong>files</strong> are not synced (too big, go stale). Only the <strong>list</strong> is.</p>
-<h3 id="71-chezmoidatapackagesyaml">7.1 <code>.chezmoidata/packages.yaml</code></h3>
-<div class="highlight"><pre><span></span><code><span class="nt">packages</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Git</span>
-<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Git.Git</span>
-<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">work-laptop</span><span class="p p-Indicator">]</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VS Code</span>
-<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft.VisualStudioCode</span>
-<span class="w">    </span><span class="nt">zip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://update.code.visualstudio.com/latest/win32-x64-archive/stable</span>
-<span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft VS Code</span>
-<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">work-laptop</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">vdi</span><span class="p p-Indicator">]</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Obsidian</span>
-<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Obsidian.Obsidian</span>
-<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">vdi</span><span class="p p-Indicator">]</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Docker Desktop</span>
-<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Docker.DockerDesktop</span>
-<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">]</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ripgrep</span>
-<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BurntSushi.ripgrep.MSVC</span>
-<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">work-laptop</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">vdi</span><span class="p p-Indicator">]</span>
-</code></pre></div>
-<ul>
-<li><code>winget</code> → used on <code>personal</code> / <code>work-laptop</code>.</li>
-<li><code>zip</code> + <code>dir</code> → used on <code>vdi</code> (unpacked to <code>C:\Install\Programs\&lt;dir&gt;</code>).</li>
-<li><code>on</code> → which machine types get it.</li>
-</ul>
-<h3 id="72-run_onchange_install-packagesps1tmpl">7.2 <code>run_onchange_install-packages.ps1.tmpl</code></h3>
-<div class="highlight"><pre><span></span><code><span class="c"># packages hash: {{ include &quot;.chezmoidata/packages.yaml&quot; | sha256sum }}</span>
-<span class="nv">$machine</span> <span class="p">=</span> <span class="s1">&#39;{{ .machine }}&#39;</span>
-<span class="nv">$root</span>    <span class="p">=</span> <span class="s1">&#39;C:\Install\Programs&#39;</span>
-
-<span class="p">{{</span> <span class="n">range</span> <span class="p">.</span><span class="n">packages</span> <span class="p">-}}</span>
-<span class="p">{{</span> <span class="k">if</span> <span class="n">has</span> <span class="p">$.</span><span class="n">machine</span> <span class="p">.</span><span class="n">on</span> <span class="p">-}}</span>
-<span class="c"># --- {{ .name }} ---</span>
-<span class="p">{{</span> <span class="k">if</span> <span class="n">and</span> <span class="p">(</span><span class="n">ne</span> <span class="p">$.</span><span class="n">machine</span> <span class="s2">&quot;vdi&quot;</span><span class="p">)</span> <span class="p">.</span><span class="n">winget</span> <span class="p">-}}</span>
-<span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-id</span> <span class="p">{{</span> <span class="p">.</span><span class="n">winget</span> <span class="p">}}</span> <span class="n">-e</span> <span class="p">-</span><span class="n">-scope</span> <span class="n">user</span> <span class="p">-</span><span class="n">-accept-package-agreements</span> <span class="p">-</span><span class="n">-accept-source-agreements</span>
-<span class="p">{{-</span> <span class="k">else</span> <span class="k">if</span> <span class="p">.</span><span class="n">zip</span> <span class="p">-}}</span>
-<span class="nv">$dest</span> <span class="p">=</span> <span class="nb">Join-Path</span> <span class="nv">$root</span> <span class="s1">&#39;{{ .dir }}&#39;</span>
-<span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="p">(</span><span class="nb">Test-Path</span> <span class="nv">$dest</span><span class="p">))</span> <span class="p">{</span>
-  <span class="nv">$tmp</span> <span class="p">=</span> <span class="nb">Join-Path</span> <span class="nv">$env:TEMP</span> <span class="s1">&#39;{{ .dir }}.zip&#39;</span>
-  <span class="nb">Invoke-WebRequest</span> <span class="s1">&#39;{{ .zip }}&#39;</span> <span class="n">-OutFile</span> <span class="nv">$tmp</span>
-  <span class="nb">Expand-Archive</span> <span class="nv">$tmp</span> <span class="n">-DestinationPath</span> <span class="nv">$dest</span> <span class="n">-Force</span>
-  <span class="nb">Remove-Item</span> <span class="nv">$tmp</span>
-<span class="p">}</span>
-<span class="p">{{-</span> <span class="k">end</span> <span class="p">}}</span>
-<span class="p">{{</span> <span class="k">end</span> <span class="p">-}}</span>
-<span class="p">{{</span> <span class="k">end</span> <span class="p">-}}</span>
-</code></pre></div>
-<p>The hash comment makes chezmoi re-run the script only when the list changes.</p>
-<h3 id="73-add-a-program">7.3 Add a program</h3>
-<ol>
-<li>Find its id: <code>winget search &lt;name&gt;</code> (or the portable zip URL for VDI).</li>
-<li>Add an entry to <code>packages.yaml</code> with the right <code>on:</code> tags.</li>
-<li><code>chezmoi apply</code> → it installs. Commit + push.</li>
-</ol>
-<hr />
-<h2 id="8-ssh">8. SSH</h2>
-<p><strong>Keys are never in the repo.</strong> Each machine gets its own key, so a lost
-laptop = delete one key on GitHub. Full key setup: <a href="../git-ssh-setup/">Git SSH Setup</a>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh-keygen</span> <span class="n">-t</span> <span class="n">ed25519</span> <span class="n">-C</span> <span class="s2">&quot;&lt;machine-name&gt;&quot;</span>
-<span class="nb">Get-Content</span> <span class="nv">$HOME</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">id_ed25519</span><span class="p">.</span><span class="n">pub</span>
-</code></pre></div>
-<p>Paste into GitHub → <em>Settings → SSH and GPG keys → New SSH key</em>.</p>
-<p>Only <code>~/.ssh/config</code> is synced (as template). VDI part (port 22 blocked):</p>
-<div class="highlight"><pre><span></span><code>{{ if eq .machine &quot;vdi&quot; }}
-Host github_vdi
-    HostName ssh.github.com
-    Port 443
-    User git
-    IdentityFile ~/.ssh/id_ed25519_work_vdi
-    IdentitiesOnly yes
-{{ end }}
-</code></pre></div>
-<p>Test:</p>
-<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="n">-T</span> <span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span>      <span class="c"># personal / work laptop</span>
-<span class="n">ssh</span> <span class="n">-T</span> <span class="n">github_vdi</span>          <span class="c"># VDI</span>
-</code></pre></div>
-<p>Clone on VDI: <code>git clone github_vdi:&lt;owner&gt;/&lt;repo&gt;.git</code>.</p>
-<p><code>.chezmoiignore</code> safety net:</p>
-<div class="highlight"><pre><span></span><code>.ssh/id_*
-.ssh/known_hosts*
-</code></pre></div>
-<hr />
-<h2 id="9-never-sync">9. Never sync</h2>
+<h2 id="10-never-sync">10. Never sync</h2>
 <ul>
 <li>SSH private keys, tokens, passwords</li>
+<li>VS Code <code>settings.json</code> (DB connection passwords)</li>
 <li><code>.env</code>, <code>.env.*</code> files</li>
 <li><code>node_modules</code>, caches, program binaries</li>
-<li>Internal hostnames / IPs (if the repo or this page is public)</li>
 </ul>
-<p>Safety net in <code>.chezmoiignore</code>:</p>
-<div class="highlight"><pre><span></span><code>**/.env
-**/.env.*
-**/node_modules/**
-</code></pre></div>
 <hr />
-<h2 id="10-cheat-sheet">10. Cheat sheet</h2>
+<h2 id="11-cheat-sheet">11. Cheat sheet</h2>
 <div class="highlight"><pre><span></span><code><span class="c"># new machine</span>
-<span class="n">chezmoi</span> <span class="n">init</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/&lt;</span><span class="n">user</span><span class="p">&gt;/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>
+<span class="n">chezmoi</span> <span class="n">init</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">Buerostuff</span><span class="p">/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>
 <span class="n">chezmoi</span> <span class="nb">diff</span>
 <span class="n">chezmoi</span> <span class="n">apply</span> <span class="n">-v</span>
 
 <span class="c"># daily</span>
-<span class="n">chezmoi</span> <span class="n">add</span> <span class="p">&lt;</span><span class="n">file</span><span class="p">&gt;</span>            <span class="c"># start tracking</span>
-<span class="n">chezmoi</span> <span class="n">re-add</span>                <span class="c"># pull local edits into repo</span>
-<span class="n">chezmoi</span> <span class="n">update</span>                <span class="c"># get + apply changes from GitHub</span>
-<span class="n">chezmoi</span> <span class="nb">cd </span>                   <span class="c"># go to repo, then git add/commit/push, exit</span>
+<span class="n">chezmoi</span> <span class="n">edit</span> <span class="p">&lt;</span><span class="n">file</span><span class="p">&gt;;</span> <span class="n">chezmoi</span> <span class="n">apply</span>
+<span class="n">chezmoi</span> <span class="n">update</span>
+<span class="nb">Save-Lintalist</span>
+<span class="n">chezmoi</span> <span class="nb">cd </span>                   <span class="c"># git add / commit / push, then exit</span>
 
 <span class="c"># inspect</span>
 <span class="n">chezmoi</span> <span class="n">managed</span>
@@ -1511,7 +2007,7 @@ Host github_vdi
 <span class="n">chezmoi</span> <span class="n">doctor</span>
 </code></pre></div>
 <hr />
-<h2 id="11-troubleshooting">11. Troubleshooting</h2>
+<h2 id="12-troubleshooting">12. Troubleshooting</h2>
 <table>
 <thead>
 <tr>
@@ -1525,24 +2021,36 @@ Host github_vdi
 <td>Add its folder to user PATH, open a new terminal.</td>
 </tr>
 <tr>
+<td><code>init</code> hangs at "Profile?"</td>
+<td>Non-interactive shell: <code>--promptChoice "Profile=rg-vdi"</code>.</td>
+</tr>
+<tr>
+<td>Profile "blocked by software restriction policies"</td>
+<td>VDI policy. Use <code>rg-vdi</code> (profile goes to <code>$PSHOME</code>), delete <code>Documents\PowerShell\Microsoft.PowerShell_profile.ps1</code>.</td>
+</tr>
+<tr>
+<td><code>chezmoi add</code> warns about a password</td>
+<td>Do not commit it. Remove from the repo, add the path to <code>.chezmoiignore</code>.</td>
+</tr>
+<tr>
 <td><code>Permission denied (publickey)</code></td>
-<td>Public key not on GitHub, or wrong host alias. <code>ssh -T ...</code> to test.</td>
+<td>Public key not on GitHub, or wrong host alias. Test with <code>ssh -T ...</code>.</td>
 </tr>
 <tr>
 <td><code>port 22: Connection timed out</code></td>
-<td>Network blocks 22 → use <code>ssh.github.com</code> port 443 alias.</td>
+<td>Network blocks 22 → use the <code>github_vdi</code> (port 443) alias.</td>
 </tr>
 <tr>
-<td>Wrong machine type</td>
-<td><code>chezmoi init --prompt</code> or edit <code>~/.config/chezmoi/chezmoi.toml</code>.</td>
+<td>Whole file shows as changed in <code>diff</code></td>
+<td>Line endings (LF vs CRLF) differ. Keep the target's endings.</td>
 </tr>
 <tr>
-<td>Install script did not run</td>
-<td>It runs only when <code>packages.yaml</code> changes; force: <code>chezmoi state delete-bucket --bucket=entryState</code> then <code>chezmoi apply</code>.</td>
+<td>Script did not run</td>
+<td><code>run_onchange</code> runs only when content changes. Force: <code>chezmoi state delete-bucket --bucket=entryState</code>, then <code>chezmoi apply</code>.</td>
 </tr>
 <tr>
 <td>Template error</td>
-<td><code>chezmoi execute-template</code> on the file to see the output.</td>
+<td><code>chezmoi execute-template --file &lt;tmpl&gt;</code> to see the output.</td>
 </tr>
 <tr>
 <td>Something looks off</td>
