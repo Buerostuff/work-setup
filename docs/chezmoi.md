@@ -56,9 +56,10 @@ Source of truth: `.chezmoidata/dotfiles.yaml`.
 | VS Code keybindings + snippets | ✓ | ✓ | ✓ | | | |
 | Lintalist settings + snippets | ✓ | ✓ | ✓ | ✓ | | |
 | SSH config (`github_vdi`, devops) | | | ✓ | | | |
+| Windows Terminal `settings.json` | ✓ | | ✓ | | | |
 
 Not synced on purpose: VS Code `settings.json` (holds DB connection passwords),
-SSH keys, Windows Terminal (not on the VDI - add later from a personal machine).
+SSH keys.
 
 ### 2.2 Programs per profile
 
@@ -333,6 +334,13 @@ keeps a copy in `~/.config/lintalist` (`Settings.ini`, `AltPaste.ini`,
 
 Synced: `keybindings.json`, `snippets/`. **Not** `settings.json` - it holds DB
 connections with passwords (chezmoi warned on `add`). Never add it.
+
+### 7.4 Windows Terminal
+
+`AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json`
+for `rg-personal` and `rg-vdi`. It contains VDI paths (`C:\Install\Programs\PowerShell\7\pwsh.exe`,
+start folder `C:\Install\_github`) - on a personal machine use the same folders
+or change them there in the repo file.
 
 ---
 
