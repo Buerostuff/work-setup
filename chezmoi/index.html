@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://buerostuff.github.io/work-setup/chezmoi/">
       
       
-        <link rel="prev" href="../git-commands/">
+        <link rel="prev" href="../chezmoi-quickstart/">
       
       
         <link rel="next" href="../docker-setup/">
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dotfiles (chezmoi) - Work Setup</title>
+        <title>Reference - Work Setup</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dotfiles-with-chezmoi" class="md-skip">
+        <a href="#dotfiles-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotfiles (chezmoi)
+              Reference
             
           </span>
         </div>
@@ -397,6 +397,88 @@
   
   
   
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dotfiles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dotfiles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chezmoi-quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -412,7 +494,7 @@
   <span class="md-ellipsis">
     
   
-    Dotfiles (chezmoi)
+    Reference
   
 
     
@@ -430,7 +512,7 @@
   <span class="md-ellipsis">
     
   
-    Dotfiles (chezmoi)
+    Reference
   
 
     
@@ -791,6 +873,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="9. Daily use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-automatic-sync-dotfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Automatic: Sync-Dotfiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-new-files-check-all-and-sync-with-the-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 New files: "check all and sync" (with the AI agent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -829,6 +939,14 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1304,6 +1422,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="9. Daily use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-automatic-sync-dotfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Automatic: Sync-Dotfiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-new-files-check-all-and-sync-with-the-ai-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 New files: "check all and sync" (with the AI agent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1356,7 +1502,11 @@
 
 
 
-<h1 id="dotfiles-with-chezmoi">Dotfiles with chezmoi</h1>
+<h1 id="dotfiles-reference">Dotfiles reference</h1>
+<blockquote>
+<p><strong><em>NOTE:</em></strong> First time? Start with the <a href="../chezmoi-quickstart/">Quick Start</a>.
+This page explains how it works.</p>
+</blockquote>
 <p>One private repo, <a href="https://github.com/Buerostuff/dotfiles"><code>Buerostuff/dotfiles</code></a>,
 keeps my agent rules, skills, tool settings and program list. On a new machine
 one command brings everything back - only the parts meant for that <strong>profile</strong>.</p>
@@ -1889,7 +2039,7 @@ list. Paths are <strong>home</strong> paths (<code>.config/...</code>), not repo
 </tbody>
 </table>
 <p>Content: Starship prompt; on VDI the .NET 10 PATH fix
-(<code>C:\Install\Programs\dotnet</code> before the system SDK 8); <code>Save-Lintalist</code> helper.</p>
+(<code>C:\Install\Programs\dotnet</code> before the system SDK 8); <code>Sync-Dotfiles</code> (9.1).</p>
 <h3 id="72-lintalist">7.2 Lintalist</h3>
 <p>Lintalist lives in <code>C:\Install\Programs\lintalist64</code> - outside home, so chezmoi
 keeps a copy in <code>~/.config/lintalist</code> (<code>Settings.ini</code>, <code>AltPaste.ini</code>,
@@ -1898,12 +2048,8 @@ keeps a copy in <code>~/.config/lintalist</code> (<code>Settings.ini</code>, <co
 <ul>
 <li><strong>Repo → Lintalist:</strong> <code>chezmoi apply</code> copies them into the install folder
   (only when they changed). Restart Lintalist.</li>
-<li>
-<p><strong>Lintalist → repo</strong> (after editing snippets in Lintalist):</p>
-<div class="highlight"><pre><span></span><code><span class="nb">Save-Lintalist</span>          <span class="c"># copies back + chezmoi re-add</span>
-<span class="n">chezmoi</span> <span class="nb">cd </span>             <span class="c"># git add / commit / push, exit</span>
-</code></pre></div>
-</li>
+<li><strong>Lintalist → repo:</strong> automatic via <code>Sync-Dotfiles</code> (see 9.1). New bundles
+  are reported; add them with "check all and sync". By hand: <code>Sync-Dotfiles</code>.</li>
 </ul>
 <h3 id="73-vs-code">7.3 VS Code</h3>
 <p>Synced: <code>keybindings.json</code>, <code>snippets/</code>. <strong>Not</strong> <code>settings.json</code> - it holds DB
@@ -1980,6 +2126,59 @@ VDI key names). Other machines write their own.</p>
 templates. Edit the <code>.tmpl</code> in the repo (or <code>chezmoi edit</code>), then
 <code>chezmoi apply</code>. Direct edits to the target are overwritten on the next apply.</p>
 </blockquote>
+<h3 id="91-automatic-sync-dotfiles">9.1 Automatic: <code>Sync-Dotfiles</code></h3>
+<p>Defined in the PowerShell profile (all profiles). On terminal start it runs
+<strong>in the background, at most once per hour</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Repo must be clean - otherwise it only reports "uncommitted changes" (protects work in progress).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Lintalist: copies changed <strong>tracked</strong> files back from <code>C:\Install\Programs\lintalist64</code>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>chezmoi re-add</code> - picks up changes to all tracked plain files (not templates).</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Secret scan on changed files - hit → nothing committed, file named.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Commit only those paths: <code>chore(sync): dotfiles &lt;date&gt; from &lt;machine&gt;</code>. <strong>No push.</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>New untracked files in watched folders (<code>watch:</code> in <code>dotfiles.yaml</code>) and new Lintalist bundles → <strong>only reported</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>The result shows as one yellow line at the next terminal start, e.g.</p>
+<div class="highlight"><pre><span></span><code>dotfiles: 2 file(s) committed - push when ready | 1 new untracked: .agents/skills/my-skill - say &#39;check all and sync&#39;
+</code></pre></div>
+<p>Run it now by hand: <code>Sync-Dotfiles</code>. Last result: <code>~/.cache/dotfiles-sync.txt</code>.</p>
+<h3 id="92-new-files-check-all-and-sync-with-the-ai-agent">9.2 New files: "check all and sync" (with the AI agent)</h3>
+<p>Say <strong>"check all and sync"</strong> to the agent. The rule lives in <code>AGENTS.md</code>, so
+every machine with agent rules knows it.</p>
+<ol>
+<li>Agent checks (read-only): <code>chezmoi diff</code>, new files in watched folders
+   (skills, VS Code snippets, Lintalist), unmanaged config of listed programs,
+   installed vs <code>packages.yaml</code>, repo git status, password scan.</li>
+<li>Agent asks per group: add or skip, which profiles get it.</li>
+<li>Agent adds the picks, <code>chezmoi diff</code> is empty.</li>
+<li>Agent shows the diff + commit message → I say yes → commit.</li>
+<li><strong>I push.</strong></li>
+</ol>
 <hr />
 <h2 id="10-never-sync">10. Never sync</h2>
 <ul>
@@ -1998,8 +2197,8 @@ templates. Edit the <code>.tmpl</code> in the repo (or <code>chezmoi edit</code>
 <span class="c"># daily</span>
 <span class="n">chezmoi</span> <span class="n">edit</span> <span class="p">&lt;</span><span class="n">file</span><span class="p">&gt;;</span> <span class="n">chezmoi</span> <span class="n">apply</span>
 <span class="n">chezmoi</span> <span class="n">update</span>
-<span class="nb">Save-Lintalist</span>
-<span class="n">chezmoi</span> <span class="nb">cd </span>                   <span class="c"># git add / commit / push, then exit</span>
+<span class="nb">Sync-Dotfiles</span>                 <span class="c"># commit tracked changes now (no push)</span>
+<span class="n">chezmoi</span> <span class="nb">cd </span>                   <span class="c"># git push, then exit</span>
 
 <span class="c"># inspect</span>
 <span class="n">chezmoi</span> <span class="n">managed</span>
