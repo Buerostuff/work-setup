@@ -386,6 +386,19 @@ Clone on VDI: `git clone github_vdi:<owner>/<repo>.git`.
 > templates. Edit the `.tmpl` in the repo (or `chezmoi edit`), then
 > `chezmoi apply`. Direct edits to the target are overwritten on the next apply.
 
+### 9.1 "check all and sync" (with the AI agent)
+
+Say **"check all and sync"** to the agent. The rule lives in `AGENTS.md`, so
+every machine with agent rules knows it.
+
+1. Agent checks (read-only): `chezmoi diff`, new files in watched folders
+   (skills, VS Code snippets, Lintalist), unmanaged config of listed programs,
+   installed vs `packages.yaml`, repo git status, password scan.
+2. Agent asks per group: add or skip, which profiles get it.
+3. Agent adds the picks, `chezmoi diff` is empty.
+4. Agent shows the diff + commit message → I say yes → commit.
+5. **I push.**
+
 ---
 
 ## 10. Never sync
