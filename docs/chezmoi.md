@@ -1,4 +1,7 @@
-# Dotfiles with chezmoi
+# Dotfiles reference
+
+> **_NOTE:_** First time? Start with the [Quick Start](chezmoi-quickstart.md).
+> This page explains how it works.
 
 One private repo, [`Buerostuff/dotfiles`](https://github.com/Buerostuff/dotfiles),
 keeps my agent rules, skills, tool settings and program list. On a new machine

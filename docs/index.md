@@ -9,7 +9,8 @@ Personal dev environment documentation.
 | [Git SSH Setup](git-ssh-setup.md) | SSH over port 443 |
 | [Git Workflow](git-workflow.md) | Branch strategy & best practices |
 | [Git Commands](git-commands.md) | Command reference |
-| [Dotfiles (chezmoi)](chezmoi.md) | Sync settings, agent rules & programs across machines |
+| [Dotfiles Quick Start](chezmoi-quickstart.md) | New machine in 7 steps, daily use |
+| [Dotfiles Reference](chezmoi.md) | How the chezmoi setup works |
 | [Docker](docker-setup.md) | Installation & VDI setup |
 | [Azure CLI](azure-cli.md) | Installation |
 | [Terminal](terminal-setup.md) | Starship setup |
