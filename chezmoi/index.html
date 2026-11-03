@@ -1,0 +1,1606 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://buerostuff.github.io/work-setup/chezmoi/">
+      
+      
+        <link rel="prev" href="../git-commands/">
+      
+      
+        <link rel="next" href="../docker-setup/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Dotfiles (chezmoi) - Work Setup</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dotfiles-with-chezmoi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/work-setup/" title="Work Setup" class="md-header__button md-logo" aria-label="Work Setup" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Work Setup
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dotfiles (chezmoi)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="/work-setup/" title="Work Setup" class="md-nav__button md-logo" aria-label="Work Setup" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z"/></svg>
+
+    </a>
+    Work Setup
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../go-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Go Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-ssh-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git SSH Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dotfiles (chezmoi)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dotfiles (chezmoi)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-machine-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Machine types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-repo-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Repo layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-new-machine-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. New machine - step by step
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. New machine - step by step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-get-chezmoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Get chezmoi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-pull-the-repo-https-no-ssh-key-needed-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Pull the repo (HTTPS - no SSH key needed yet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-preview-then-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Preview, then apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-create-the-ssh-key-for-this-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Create the SSH key for this machine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-switch-the-repo-to-ssh-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Switch the repo to SSH (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-daily-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Daily use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-choosing-what-syncs-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Choosing what syncs where
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Choosing what syncs where">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ask-machine-type-once-chezmoitomltmpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Ask machine type once - .chezmoi.toml.tmpl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-skip-whole-files-per-machine-chezmoiignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Skip whole files per machine - .chezmoiignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-different-content-inside-one-file-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Different content inside one file - templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-programs-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Programs list
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Programs list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-chezmoidatapackagesyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 .chezmoidata/packages.yaml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-run_onchange_install-packagesps1tmpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 run_onchange_install-packages.ps1.tmpl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-add-a-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Add a program
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. SSH
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-never-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Never sync
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure-cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Azure CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminal-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fonts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-machine-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Machine types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-repo-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Repo layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-new-machine-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. New machine - step by step
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. New machine - step by step">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-get-chezmoi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Get chezmoi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-pull-the-repo-https-no-ssh-key-needed-yet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Pull the repo (HTTPS - no SSH key needed yet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-preview-then-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Preview, then apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-create-the-ssh-key-for-this-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Create the SSH key for this machine
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-switch-the-repo-to-ssh-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Switch the repo to SSH (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-daily-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Daily use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-choosing-what-syncs-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Choosing what syncs where
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Choosing what syncs where">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ask-machine-type-once-chezmoitomltmpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Ask machine type once - .chezmoi.toml.tmpl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-skip-whole-files-per-machine-chezmoiignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Skip whole files per machine - .chezmoiignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-different-content-inside-one-file-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Different content inside one file - templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-programs-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Programs list
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Programs list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-chezmoidatapackagesyaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 .chezmoidata/packages.yaml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-run_onchange_install-packagesps1tmpl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 run_onchange_install-packages.ps1.tmpl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-add-a-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Add a program
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. SSH
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-never-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Never sync
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Cheat sheet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dotfiles-with-chezmoi">Dotfiles with chezmoi</h1>
+<p>One private repo keeps my agent rules, skills, tool settings and program list.
+On a new machine, one command brings everything back - only the parts meant
+for that machine type.</p>
+<ul>
+<li><a href="#1-concepts">1. Concepts</a></li>
+<li><a href="#2-machine-types">2. Machine types</a></li>
+<li><a href="#3-repo-layout">3. Repo layout</a></li>
+<li><a href="#4-new-machine-step-by-step">4. New machine - step by step</a></li>
+<li><a href="#5-daily-use">5. Daily use</a></li>
+<li><a href="#6-choosing-what-syncs-where">6. Choosing what syncs where</a></li>
+<li><a href="#7-programs-list">7. Programs list</a></li>
+<li><a href="#8-ssh">8. SSH</a></li>
+<li><a href="#9-never-sync">9. Never sync</a></li>
+<li><a href="#10-cheat-sheet">10. Cheat sheet</a></li>
+<li><a href="#11-troubleshooting">11. Troubleshooting</a></li>
+</ul>
+<hr />
+<h2 id="1-concepts">1. Concepts</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>chezmoi</strong></td>
+<td>Small tool (single exe) that copies files from a git repo into my home folder.</td>
+</tr>
+<tr>
+<td><strong>Source dir</strong></td>
+<td>The local clone of the repo: <code>~/.local/share/chezmoi</code>. I edit here.</td>
+</tr>
+<tr>
+<td><strong>Target</strong></td>
+<td>The real files in my home folder (e.g. <code>~/.config/opencode/AGENTS.md</code>).</td>
+</tr>
+<tr>
+<td><strong>Template</strong> (<code>.tmpl</code>)</td>
+<td>File with <code>{{ if ... }}</code> blocks - content changes per machine.</td>
+</tr>
+<tr>
+<td><strong>Script</strong> (<code>run_...</code>)</td>
+<td>PowerShell script chezmoi runs on <code>apply</code> (e.g. install programs).</td>
+</tr>
+<tr>
+<td><strong>Machine type</strong></td>
+<td><code>personal</code>, <code>vdi</code> or <code>work-laptop</code>. Asked once per machine.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code> GitHub repo  ──chezmoi init/update──▶  source dir  ──chezmoi apply──▶  home folder
+ (private)    ◀──────git push───────    (~/.local/share/chezmoi)  ◀──chezmoi re-add──
+</code></pre></div>
+<p>Only files I explicitly <code>chezmoi add</code> are managed. Everything else is untouched.</p>
+<hr />
+<h2 id="2-machine-types">2. Machine types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Admin?</th>
+<th>Programs installed via</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>personal</code></td>
+<td>yes</td>
+<td><code>winget</code></td>
+<td>Full set.</td>
+</tr>
+<tr>
+<td><code>work-laptop</code></td>
+<td>maybe</td>
+<td><code>winget</code> (user scope)</td>
+<td>No private stuff.</td>
+</tr>
+<tr>
+<td><code>vdi</code></td>
+<td><strong>no</strong></td>
+<td>portable zips → <code>C:\Install\Programs</code></td>
+<td>Port 22 blocked → SSH via port 443. Check company policy before pushing from here.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-repo-layout">3. Repo layout</h2>
+<div class="highlight"><pre><span></span><code>dotfiles/
+├── .chezmoi.toml.tmpl                 # asks machine type once
+├── .chezmoiignore                     # what NOT to place (per machine)
+├── .chezmoidata/
+│   └── packages.yaml                  # program list with machine tags
+├── run_onchange_install-packages.ps1.tmpl   # installs programs from the list
+├── dot_config/
+│   └── opencode/
+│       ├── AGENTS.md.tmpl             # global agent rules (templated)
+│       ├── opencode.jsonc.tmpl
+│       └── skill/...
+├── dot_agents/skills/...              # shared skills
+├── dot_claude/skills/...
+├── dot_ssh/
+│   └── config.tmpl                    # ssh config ONLY, never keys
+├── Documents/PowerShell/Microsoft.PowerShell_profile.ps1.tmpl
+└── docs/                              # this page (GitHub Pages)
+</code></pre></div>
+<p>Naming rules chezmoi uses:</p>
+<table>
+<thead>
+<tr>
+<th>Repo name</th>
+<th>Becomes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dot_config</code></td>
+<td><code>.config</code></td>
+</tr>
+<tr>
+<td><code>file.tmpl</code></td>
+<td><code>file</code> (rendered as template)</td>
+</tr>
+<tr>
+<td><code>private_x</code></td>
+<td><code>x</code> with restricted permissions</td>
+</tr>
+<tr>
+<td><code>run_once_x.ps1</code></td>
+<td>runs once per machine</td>
+</tr>
+<tr>
+<td><code>run_onchange_x.ps1</code></td>
+<td>runs when its content changes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-new-machine-step-by-step">4. New machine - step by step</h2>
+<h3 id="41-get-chezmoi">4.1 Get chezmoi</h3>
+<p><strong>Personal / work laptop (admin or winget allowed):</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">winget</span> <span class="n">install</span> <span class="n">Git</span><span class="p">.</span><span class="n">Git</span> <span class="n">twpayne</span><span class="p">.</span><span class="n">chezmoi</span>
+</code></pre></div>
+<p><strong>VDI (no admin):</strong> download the Windows zip from
+<a href="https://github.com/twpayne/chezmoi/releases">https://github.com/twpayne/chezmoi/releases</a>, unpack to
+<code>C:\Install\Programs\chezmoi</code>, then add it to the user PATH:</p>
+<div class="highlight"><pre><span></span><code><span class="no">[Environment]</span><span class="p">::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;Path&#39;</span><span class="p">,</span>
+  <span class="no">[Environment]</span><span class="p">::</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s1">&#39;Path&#39;</span><span class="p">,</span><span class="s1">&#39;User&#39;</span><span class="p">)</span> <span class="p">+</span> <span class="s1">&#39;;C:\Install\Programs\chezmoi&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;User&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Open a new terminal, check: <code>chezmoi --version</code>.</p>
+<h3 id="42-pull-the-repo-https-no-ssh-key-needed-yet">4.2 Pull the repo (HTTPS - no SSH key needed yet)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="n">init</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/&lt;</span><span class="n">user</span><span class="p">&gt;/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>
+</code></pre></div>
+<p>A browser login opens (Git Credential Manager). chezmoi then asks:</p>
+<div class="highlight"><pre><span></span><code>Machine type: personal / vdi / work-laptop
+</code></pre></div>
+<h3 id="43-preview-then-apply">4.3 Preview, then apply</h3>
+<div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="nb">diff </span>     <span class="c"># what would change</span>
+<span class="n">chezmoi</span> <span class="n">apply</span> <span class="n">-v</span>  <span class="c"># place files + run install script</span>
+</code></pre></div>
+<h3 id="44-create-the-ssh-key-for-this-machine">4.4 Create the SSH key for this machine</h3>
+<p>See <a href="#8-ssh">8. SSH</a>.</p>
+<h3 id="45-switch-the-repo-to-ssh-optional">4.5 Switch the repo to SSH (optional)</h3>
+<div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="nb">cd</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="nb">set-url</span> <span class="n">origin</span> <span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span><span class="p">:&lt;</span><span class="n">user</span><span class="p">&gt;/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>   <span class="c"># or github_vdi:&lt;user&gt;/dotfiles.git on VDI</span>
+<span class="n">exit</span>
+</code></pre></div>
+<p>Done.</p>
+<hr />
+<h2 id="5-daily-use">5. Daily use</h2>
+<table>
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start syncing a new file</td>
+<td><code>chezmoi add &lt;path&gt;</code></td>
+</tr>
+<tr>
+<td>Add as template (per-machine content)</td>
+<td><code>chezmoi add --template &lt;path&gt;</code></td>
+</tr>
+<tr>
+<td>Edit a managed file</td>
+<td><code>chezmoi edit &lt;path&gt;</code> then <code>chezmoi apply</code></td>
+</tr>
+<tr>
+<td>I edited the real file directly</td>
+<td><code>chezmoi re-add</code></td>
+</tr>
+<tr>
+<td>See differences</td>
+<td><code>chezmoi diff</code></td>
+</tr>
+<tr>
+<td>Save to GitHub</td>
+<td><code>chezmoi cd</code> → <code>git add &lt;files&gt;</code> → <code>git commit</code> → <code>git push</code> → <code>exit</code></td>
+</tr>
+<tr>
+<td>Get changes on another machine</td>
+<td><code>chezmoi update</code> (= git pull + apply)</td>
+</tr>
+<tr>
+<td>Stop syncing a file (keeps it locally)</td>
+<td><code>chezmoi forget &lt;path&gt;</code></td>
+</tr>
+<tr>
+<td>List managed files</td>
+<td><code>chezmoi managed</code></td>
+</tr>
+<tr>
+<td>Show machine data</td>
+<td><code>chezmoi data</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-choosing-what-syncs-where">6. Choosing what syncs where</h2>
+<h3 id="61-ask-machine-type-once-chezmoitomltmpl">6.1 Ask machine type once - <code>.chezmoi.toml.tmpl</code></h3>
+<div class="highlight"><pre><span></span><code><span class="err">{{</span><span class="n">-</span><span class="w"> </span><span class="err">$</span><span class="n">machine</span><span class="w"> </span><span class="err">:</span><span class="o">=</span><span class="w"> </span><span class="err">promptChoiceOnce . </span><span class="s2">&quot;machine&quot;</span><span class="w"> </span><span class="s2">&quot;Machine type&quot;</span><span class="w"> </span><span class="err">(</span><span class="n">list</span><span class="w"> </span><span class="s2">&quot;personal&quot;</span><span class="w"> </span><span class="s2">&quot;vdi&quot;</span><span class="w"> </span><span class="s2">&quot;work-laptop&quot;</span><span class="err">)</span><span class="w"> </span><span class="n">-</span><span class="err">}}</span>
+<span class="k">[data]</span>
+<span class="w">  </span><span class="n">machine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">$</span><span class="n">machine</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">quote</span><span class="w"> </span><span class="p">}</span><span class="err">}</span>
+</code></pre></div>
+<p>Change it later: <code>chezmoi init --prompt</code>, or edit <code>~/.config/chezmoi/chezmoi.toml</code>.</p>
+<h3 id="62-skip-whole-files-per-machine-chezmoiignore">6.2 Skip whole files per machine - <code>.chezmoiignore</code></h3>
+<div class="highlight"><pre><span></span><code>README.md
+docs/**
+
+{{ if ne .machine &quot;vdi&quot; }}
+.config/opencode/skill/windows-eperm-node-modules/**
+{{ end }}
+
+{{ if eq .machine &quot;work-laptop&quot; }}
+Documents/private-notes/**
+{{ end }}
+</code></pre></div>
+<p>(Paths here are <strong>target</strong> paths, i.e. <code>.config/...</code>, not <code>dot_config/...</code>.)</p>
+<h3 id="63-different-content-inside-one-file-templates">6.3 Different content inside one file - templates</h3>
+<p><code>AGENTS.md.tmpl</code>:</p>
+<div class="highlight"><pre><span></span><code># Global rules
+... shared rules ...
+
+{{ if eq .machine &quot;vdi&quot; }}
+## Corporate DevVDI (no admin rights)
+... VDI-only rules ...
+{{ end }}
+</code></pre></div>
+<p>Paths that differ per machine:</p>
+<div class="highlight"><pre><span></span><code>{{ .chezmoi.homeDir }}/.mcp/ag-mcp/...
+</code></pre></div>
+<p>Test a template without applying:</p>
+<div class="highlight"><pre><span></span><code><span class="n">chezmoi</span> <span class="n">execute-template</span> <span class="p">&lt;</span> <span class="s2">&quot;</span><span class="p">$(</span><span class="n">chezmoi</span> <span class="n">source-path</span><span class="p">)</span><span class="s2">\dot_config\opencode\AGENTS.md.tmpl&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="7-programs-list">7. Programs list</h2>
+<p>Program <strong>files</strong> are not synced (too big, go stale). Only the <strong>list</strong> is.</p>
+<h3 id="71-chezmoidatapackagesyaml">7.1 <code>.chezmoidata/packages.yaml</code></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">packages</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Git</span>
+<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Git.Git</span>
+<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">work-laptop</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VS Code</span>
+<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft.VisualStudioCode</span>
+<span class="w">    </span><span class="nt">zip</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://update.code.visualstudio.com/latest/win32-x64-archive/stable</span>
+<span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Microsoft VS Code</span>
+<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">work-laptop</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">vdi</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Obsidian</span>
+<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Obsidian.Obsidian</span>
+<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">vdi</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Docker Desktop</span>
+<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Docker.DockerDesktop</span>
+<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ripgrep</span>
+<span class="w">    </span><span class="nt">winget</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BurntSushi.ripgrep.MSVC</span>
+<span class="w">    </span><span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">personal</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">work-laptop</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">vdi</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+<ul>
+<li><code>winget</code> → used on <code>personal</code> / <code>work-laptop</code>.</li>
+<li><code>zip</code> + <code>dir</code> → used on <code>vdi</code> (unpacked to <code>C:\Install\Programs\&lt;dir&gt;</code>).</li>
+<li><code>on</code> → which machine types get it.</li>
+</ul>
+<h3 id="72-run_onchange_install-packagesps1tmpl">7.2 <code>run_onchange_install-packages.ps1.tmpl</code></h3>
+<div class="highlight"><pre><span></span><code><span class="c"># packages hash: {{ include &quot;.chezmoidata/packages.yaml&quot; | sha256sum }}</span>
+<span class="nv">$machine</span> <span class="p">=</span> <span class="s1">&#39;{{ .machine }}&#39;</span>
+<span class="nv">$root</span>    <span class="p">=</span> <span class="s1">&#39;C:\Install\Programs&#39;</span>
+
+<span class="p">{{</span> <span class="n">range</span> <span class="p">.</span><span class="n">packages</span> <span class="p">-}}</span>
+<span class="p">{{</span> <span class="k">if</span> <span class="n">has</span> <span class="p">$.</span><span class="n">machine</span> <span class="p">.</span><span class="n">on</span> <span class="p">-}}</span>
+<span class="c"># --- {{ .name }} ---</span>
+<span class="p">{{</span> <span class="k">if</span> <span class="n">and</span> <span class="p">(</span><span class="n">ne</span> <span class="p">$.</span><span class="n">machine</span> <span class="s2">&quot;vdi&quot;</span><span class="p">)</span> <span class="p">.</span><span class="n">winget</span> <span class="p">-}}</span>
+<span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-id</span> <span class="p">{{</span> <span class="p">.</span><span class="n">winget</span> <span class="p">}}</span> <span class="n">-e</span> <span class="p">-</span><span class="n">-scope</span> <span class="n">user</span> <span class="p">-</span><span class="n">-accept-package-agreements</span> <span class="p">-</span><span class="n">-accept-source-agreements</span>
+<span class="p">{{-</span> <span class="k">else</span> <span class="k">if</span> <span class="p">.</span><span class="n">zip</span> <span class="p">-}}</span>
+<span class="nv">$dest</span> <span class="p">=</span> <span class="nb">Join-Path</span> <span class="nv">$root</span> <span class="s1">&#39;{{ .dir }}&#39;</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="p">(</span><span class="nb">Test-Path</span> <span class="nv">$dest</span><span class="p">))</span> <span class="p">{</span>
+  <span class="nv">$tmp</span> <span class="p">=</span> <span class="nb">Join-Path</span> <span class="nv">$env:TEMP</span> <span class="s1">&#39;{{ .dir }}.zip&#39;</span>
+  <span class="nb">Invoke-WebRequest</span> <span class="s1">&#39;{{ .zip }}&#39;</span> <span class="n">-OutFile</span> <span class="nv">$tmp</span>
+  <span class="nb">Expand-Archive</span> <span class="nv">$tmp</span> <span class="n">-DestinationPath</span> <span class="nv">$dest</span> <span class="n">-Force</span>
+  <span class="nb">Remove-Item</span> <span class="nv">$tmp</span>
+<span class="p">}</span>
+<span class="p">{{-</span> <span class="k">end</span> <span class="p">}}</span>
+<span class="p">{{</span> <span class="k">end</span> <span class="p">-}}</span>
+<span class="p">{{</span> <span class="k">end</span> <span class="p">-}}</span>
+</code></pre></div>
+<p>The hash comment makes chezmoi re-run the script only when the list changes.</p>
+<h3 id="73-add-a-program">7.3 Add a program</h3>
+<ol>
+<li>Find its id: <code>winget search &lt;name&gt;</code> (or the portable zip URL for VDI).</li>
+<li>Add an entry to <code>packages.yaml</code> with the right <code>on:</code> tags.</li>
+<li><code>chezmoi apply</code> → it installs. Commit + push.</li>
+</ol>
+<hr />
+<h2 id="8-ssh">8. SSH</h2>
+<p><strong>Keys are never in the repo.</strong> Each machine gets its own key, so a lost
+laptop = delete one key on GitHub. Full key setup: <a href="../git-ssh-setup/">Git SSH Setup</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">ssh-keygen</span> <span class="n">-t</span> <span class="n">ed25519</span> <span class="n">-C</span> <span class="s2">&quot;&lt;machine-name&gt;&quot;</span>
+<span class="nb">Get-Content</span> <span class="nv">$HOME</span><span class="p">\.</span><span class="n">ssh</span><span class="p">\</span><span class="n">id_ed25519</span><span class="p">.</span><span class="n">pub</span>
+</code></pre></div>
+<p>Paste into GitHub → <em>Settings → SSH and GPG keys → New SSH key</em>.</p>
+<p>Only <code>~/.ssh/config</code> is synced (as template). VDI part (port 22 blocked):</p>
+<div class="highlight"><pre><span></span><code>{{ if eq .machine &quot;vdi&quot; }}
+Host github_vdi
+    HostName ssh.github.com
+    Port 443
+    User git
+    IdentityFile ~/.ssh/id_ed25519_work_vdi
+    IdentitiesOnly yes
+{{ end }}
+</code></pre></div>
+<p>Test:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="n">-T</span> <span class="n">git</span><span class="nv">@github</span><span class="p">.</span><span class="n">com</span>      <span class="c"># personal / work laptop</span>
+<span class="n">ssh</span> <span class="n">-T</span> <span class="n">github_vdi</span>          <span class="c"># VDI</span>
+</code></pre></div>
+<p>Clone on VDI: <code>git clone github_vdi:&lt;owner&gt;/&lt;repo&gt;.git</code>.</p>
+<p><code>.chezmoiignore</code> safety net:</p>
+<div class="highlight"><pre><span></span><code>.ssh/id_*
+.ssh/known_hosts*
+</code></pre></div>
+<hr />
+<h2 id="9-never-sync">9. Never sync</h2>
+<ul>
+<li>SSH private keys, tokens, passwords</li>
+<li><code>.env</code>, <code>.env.*</code> files</li>
+<li><code>node_modules</code>, caches, program binaries</li>
+<li>Internal hostnames / IPs (if the repo or this page is public)</li>
+</ul>
+<p>Safety net in <code>.chezmoiignore</code>:</p>
+<div class="highlight"><pre><span></span><code>**/.env
+**/.env.*
+**/node_modules/**
+</code></pre></div>
+<hr />
+<h2 id="10-cheat-sheet">10. Cheat sheet</h2>
+<div class="highlight"><pre><span></span><code><span class="c"># new machine</span>
+<span class="n">chezmoi</span> <span class="n">init</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/&lt;</span><span class="n">user</span><span class="p">&gt;/</span><span class="n">dotfiles</span><span class="p">.</span><span class="n">git</span>
+<span class="n">chezmoi</span> <span class="nb">diff</span>
+<span class="n">chezmoi</span> <span class="n">apply</span> <span class="n">-v</span>
+
+<span class="c"># daily</span>
+<span class="n">chezmoi</span> <span class="n">add</span> <span class="p">&lt;</span><span class="n">file</span><span class="p">&gt;</span>            <span class="c"># start tracking</span>
+<span class="n">chezmoi</span> <span class="n">re-add</span>                <span class="c"># pull local edits into repo</span>
+<span class="n">chezmoi</span> <span class="n">update</span>                <span class="c"># get + apply changes from GitHub</span>
+<span class="n">chezmoi</span> <span class="nb">cd </span>                   <span class="c"># go to repo, then git add/commit/push, exit</span>
+
+<span class="c"># inspect</span>
+<span class="n">chezmoi</span> <span class="n">managed</span>
+<span class="n">chezmoi</span> <span class="n">data</span>
+<span class="n">chezmoi</span> <span class="n">doctor</span>
+</code></pre></div>
+<hr />
+<h2 id="11-troubleshooting">11. Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chezmoi</code> not found</td>
+<td>Add its folder to user PATH, open a new terminal.</td>
+</tr>
+<tr>
+<td><code>Permission denied (publickey)</code></td>
+<td>Public key not on GitHub, or wrong host alias. <code>ssh -T ...</code> to test.</td>
+</tr>
+<tr>
+<td><code>port 22: Connection timed out</code></td>
+<td>Network blocks 22 → use <code>ssh.github.com</code> port 443 alias.</td>
+</tr>
+<tr>
+<td>Wrong machine type</td>
+<td><code>chezmoi init --prompt</code> or edit <code>~/.config/chezmoi/chezmoi.toml</code>.</td>
+</tr>
+<tr>
+<td>Install script did not run</td>
+<td>It runs only when <code>packages.yaml</code> changes; force: <code>chezmoi state delete-bucket --bucket=entryState</code> then <code>chezmoi apply</code>.</td>
+</tr>
+<tr>
+<td>Template error</td>
+<td><code>chezmoi execute-template</code> on the file to see the output.</td>
+</tr>
+<tr>
+<td>Something looks off</td>
+<td><code>chezmoi doctor</code>.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.instant", "navigation.sections"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
