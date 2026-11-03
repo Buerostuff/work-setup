@@ -312,7 +312,7 @@ On Windows a script copies it to the real profile:
 | others | `$PROFILE` (`Documents\PowerShell\...`) | normal place |
 
 Content: Starship prompt; on VDI the .NET 10 PATH fix
-(`C:\Install\Programs\dotnet` before the system SDK 8); `Save-Lintalist` helper.
+(`C:\Install\Programs\dotnet` before the system SDK 8); `Sync-Dotfiles` (9.1).
 
 ### 7.2 Lintalist
 
@@ -323,12 +323,8 @@ keeps a copy in `~/.config/lintalist` (`Settings.ini`, `AltPaste.ini`,
 
 - **Repo → Lintalist:** `chezmoi apply` copies them into the install folder
   (only when they changed). Restart Lintalist.
-- **Lintalist → repo** (after editing snippets in Lintalist):
-
-    ```powershell
-    Save-Lintalist          # copies back + chezmoi re-add
-    chezmoi cd              # git add / commit / push, exit
-    ```
+- **Lintalist → repo:** automatic via `Sync-Dotfiles` (see 9.1). New bundles
+  are reported; add them with "check all and sync". By hand: `Sync-Dotfiles`.
 
 ### 7.3 VS Code
 
@@ -386,7 +382,29 @@ Clone on VDI: `git clone github_vdi:<owner>/<repo>.git`.
 > templates. Edit the `.tmpl` in the repo (or `chezmoi edit`), then
 > `chezmoi apply`. Direct edits to the target are overwritten on the next apply.
 
-### 9.1 "check all and sync" (with the AI agent)
+### 9.1 Automatic: `Sync-Dotfiles`
+
+Defined in the PowerShell profile (all profiles). On terminal start it runs
+**in the background, at most once per hour**:
+
+| Step | What |
+|---|---|
+| 1 | Repo must be clean - otherwise it only reports "uncommitted changes" (protects work in progress). |
+| 2 | Lintalist: copies changed **tracked** files back from `C:\Install\Programs\lintalist64`. |
+| 3 | `chezmoi re-add` - picks up changes to all tracked plain files (not templates). |
+| 4 | Secret scan on changed files - hit → nothing committed, file named. |
+| 5 | Commit only those paths: `chore(sync): dotfiles <date> from <machine>`. **No push.** |
+| 6 | New untracked files in watched folders (`watch:` in `dotfiles.yaml`) and new Lintalist bundles → **only reported**. |
+
+The result shows as one yellow line at the next terminal start, e.g.
+
+```
+dotfiles: 2 file(s) committed - push when ready | 1 new untracked: .agents/skills/my-skill - say 'check all and sync'
+```
+
+Run it now by hand: `Sync-Dotfiles`. Last result: `~/.cache/dotfiles-sync.txt`.
+
+### 9.2 New files: "check all and sync" (with the AI agent)
 
 Say **"check all and sync"** to the agent. The rule lives in `AGENTS.md`, so
 every machine with agent rules knows it.
@@ -421,8 +439,8 @@ chezmoi apply -v
 # daily
 chezmoi edit <file>; chezmoi apply
 chezmoi update
-Save-Lintalist
-chezmoi cd                    # git add / commit / push, then exit
+Sync-Dotfiles                 # commit tracked changes now (no push)
+chezmoi cd                    # git push, then exit
 
 # inspect
 chezmoi managed
