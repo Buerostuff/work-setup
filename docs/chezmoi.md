@@ -14,7 +14,7 @@ one command brings everything back - only the parts meant for that **profile**.
 | Term | Meaning |
 |---|---|
 | **chezmoi** | Small tool (single exe) that copies files from a git repo into my home folder. |
-| **Source dir** | The repo on disk. VDI: `C:\Install\_github\dotfiles`. Elsewhere default: `~/.local/share/chezmoi`. I edit here. |
+| **Source dir** | The repo on disk, always with my other repos: `C:\Install\_github\dotfiles` (Mac/Linux: `~/_github/dotfiles`). I edit here. |
 | **Target** | The real file in my home folder (e.g. `~/.config/opencode/AGENTS.md`). |
 | **Template** (`.tmpl`) | File with `{{ if ... }}` blocks - content changes per profile / OS. |
 | **Script** (`run_...`) | Script chezmoi runs on `apply` (install programs, copy settings). |
@@ -151,17 +151,21 @@ dotfiles/
 
 ### 4.2 Pull the repo and pick the profile (HTTPS - no SSH key needed yet)
 
-=== "Windows / macOS / Linux"
+The repo always lives with my other repos: `C:\Install\_github\dotfiles`
+(Mac/Linux: `~/_github/dotfiles`). chezmoi stores that path as `sourceDir`.
 
-    ```powershell
-    chezmoi init https://github.com/Buerostuff/dotfiles.git
-    ```
-
-=== "VDI (repo in C:\Install\_github)"
+=== "Windows (any profile)"
 
     ```powershell
     git clone https://github.com/Buerostuff/dotfiles.git C:\Install\_github\dotfiles
     chezmoi init --source C:\Install\_github\dotfiles
+    ```
+
+=== "macOS / Linux"
+
+    ```bash
+    git clone https://github.com/Buerostuff/dotfiles.git ~/_github/dotfiles
+    chezmoi init --source ~/_github/dotfiles
     ```
 
 A browser login opens (Git Credential Manager). chezmoi asks:
@@ -435,7 +439,8 @@ every machine with agent rules knows it.
 
 ```powershell
 # new machine
-chezmoi init https://github.com/Buerostuff/dotfiles.git
+git clone https://github.com/Buerostuff/dotfiles.git C:\Install\_github\dotfiles
+chezmoi init --source C:\Install\_github\dotfiles
 chezmoi diff
 chezmoi apply -v
 

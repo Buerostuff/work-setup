@@ -34,14 +34,16 @@ winget install Git.Git twpayne.chezmoi
 
 Close PowerShell, open it again.
 
-**3. Get my setup:**
+**3. Get my setup** (repo goes to `C:\Install\_github\dotfiles`, next to my other repos):
 
 ```powershell
-chezmoi init https://github.com/Buerostuff/dotfiles.git
+git clone https://github.com/Buerostuff/dotfiles.git C:\Install\_github\dotfiles
+chezmoi init --source C:\Install\_github\dotfiles
 ```
 
-- A browser opens → log in to GitHub (account **Buerostuff**).
+- A browser opens on the clone → log in to GitHub (account **Buerostuff**).
 - It asks `Profile` → type `rg-personal` → Enter.
+- chezmoi remembers the folder. `chezmoi cd` / `chezmoi update` use it from now on.
 
 **4. Look before it changes anything:**
 
@@ -100,10 +102,11 @@ Shows `Hi Buerostuff!` → good.
 brew install git chezmoi
 ```
 
-**3–5. Same as Windows:**
+**3–5. Same as Windows** (repo in `~/_github/dotfiles`):
 
 ```bash
-chezmoi init https://github.com/Buerostuff/dotfiles.git   # Profile: rg-personal
+git clone https://github.com/Buerostuff/dotfiles.git ~/_github/dotfiles
+chezmoi init --source ~/_github/dotfiles   # Profile: rg-personal
 chezmoi diff
 chezmoi apply -v
 ```
@@ -168,13 +171,14 @@ use the `github_vdi` alias. Test: `ssh -T github_vdi`.
 ## New company laptop
 
 ```powershell
-winget install twpayne.chezmoi
+winget install Git.Git twpayne.chezmoi
 ```
 
 New PowerShell, then:
 
 ```powershell
-chezmoi init https://github.com/Buerostuff/dotfiles.git   # Profile: rg-work
+git clone https://github.com/Buerostuff/dotfiles.git C:\Install\_github\dotfiles
+chezmoi init --source C:\Install\_github\dotfiles   # Profile: rg-work
 chezmoi apply -v
 ```
 
@@ -196,7 +200,7 @@ Only Lintalist settings come over. Install Lintalist by hand into
 | see `repo has uncommitted changes` | I edited the repo by hand. Commit or undo it there. |
 | want my changes from another machine here | `chezmoi update` |
 
-Where is the repo?
+Where is the repo? Always `C:\Install\_github\dotfiles` (Mac/Linux: `~/_github/dotfiles`).
 
 ```powershell
 chezmoi cd      # opens a shell in the repo; type exit to leave
