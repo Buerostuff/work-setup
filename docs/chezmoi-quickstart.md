@@ -264,6 +264,16 @@ chezmoi forget ~/.config/sometool/config.toml
 
 The file stays on the machine, just leaves the repo.
 
+### Which email do my commits get?
+
+All repos live in `C:\Install\_github`. The **remote** decides:
+
+- PORR GitLab / Azure DevOps → `raja@porr.at` (VDI only)
+- everything else (GitHub) → `buerostuff@gmail.com`
+
+Check in a repo: `git config user.email`. New account? See
+[reference 7.5](chezmoi.md#75-several-git-accounts-one-folder-for-all-repos).
+
 ---
 
 ## Something went wrong

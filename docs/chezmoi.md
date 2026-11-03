@@ -53,7 +53,7 @@ Source of truth: `.chezmoidata/dotfiles.yaml`.
 | Agent rules `AGENTS.md` | ✓ | ✓ | ✓ (+VDI, IT tickets) | | | |
 | Skills (`.agents`, `.claude`, opencode) | ✓ | ✓ | ✓ | | | |
 | `opencode.jsonc` | ✓ | ✓ | ✓ | | | |
-| `.gitconfig` (name + email) | ✓ | | ✓ | | | |
+| `.gitconfig` (name + email, accounts → [7.5](#75-several-git-accounts-one-folder-for-all-repos)) | ✓ | | ✓ | | | |
 | `starship.toml` | ✓ | ✓ | ✓ | | ✓ | ✓ |
 | PowerShell profile | ✓ | ✓ | ✓ | | ✓ | ✓ |
 | VS Code keybindings + snippets | ✓ | ✓ | ✓ | | | |
@@ -344,6 +344,54 @@ connections with passwords (chezmoi warned on `add`). Never add it.
 for `rg-personal` and `rg-vdi`. It contains VDI paths (`C:\Install\Programs\PowerShell\7\pwsh.exe`,
 start folder `C:\Install\_github`) - on a personal machine use the same folders
 or change them there in the repo file.
+
+### 7.5 Several git accounts (one folder for all repos)
+
+All repos stay in `C:\Install\_github`. The **remote URL** decides which
+name + email a commit gets - not the folder.
+
+Source of truth: `.chezmoidata/accounts.yaml`.
+
+| Account | Email | Used when the remote is... | Profiles |
+|---|---|---|---|
+| default (Buerostuff) | `buerostuff@gmail.com` | anything else - GitHub `Buerostuff/*`, `ppe-intelligence/*`, others | all with `.gitconfig` |
+| `porr` | `raja@porr.at` | `gitlab.porr.group`, Azure DevOps `porrdevops` (HTTPS or `devops_vdi` alias) | `rg-vdi` |
+
+How: `.gitconfig.tmpl` writes one line per pattern,
+
+```ini
+[includeIf "hasconfig:remote.*.url:https://gitlab.porr.group/**"]
+	path = ~/.config/git/porr.gitconfig
+```
+
+and `~/.config/git/porr.gitconfig` holds that account's `[user]` name + email.
+Needs git 2.36+.
+
+> **_NOTE:_** In patterns `**` only works right after a `/`.
+> `devops_vdi:**` does **not** match - use `devops_vdi:v3/porrdevops/**`.
+
+**Check a repo:**
+
+```powershell
+git config user.email     # which identity this repo uses
+git remote -v             # which URL / alias it matched
+```
+
+**Add another account** (e.g. a second GitHub user):
+
+1. In `accounts.yaml` add an entry (`id`, `name`, `email`, `match`, `on`).
+2. Copy `dot_config/git/porr.gitconfig.tmpl` to `<id>.gitconfig.tmpl`, change `"porr"` to the new id.
+3. For SSH: add a host alias with its own key in the SSH config, e.g.
+
+    ```
+    Host github-other
+        HostName github.com
+        User git
+        IdentityFile ~/.ssh/id_ed25519_github_other
+    ```
+
+    and match `github-other:*/**`. Clone with `git clone github-other:org/repo.git`.
+4. `chezmoi apply`, check with `git config user.email`, commit + push.
 
 ---
 
